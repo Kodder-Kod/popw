@@ -124,7 +124,7 @@ const Navbar = () => {
       </div>
 
       {/**  Mobile and tablet view navbar */}
-        <div className="bg-[#0b58a5] text-white fixed top-0 w-screen z-50 shadow-lg  block lg:hidden">
+        <div className="bg-[#0b58a5] text-white fixed top-0 z-50 shadow-lg w-screen  block lg:hidden">
 
         <div className="flex justify-around items-center py-2 border-b border-gray-200">
           <a href="/allpages/patients" className="text-white hover:text-gray-300">For Patients</a>
@@ -139,7 +139,7 @@ const Navbar = () => {
             <img src="/seh_logo.png" alt="logo" className="h-16" />
           </div>
           <div className="flex gap-2 items-center">
-            <FaSearch size={20} className="text-black" />
+            <FaSearch size={20} className="text-black mr-3" />
           </div>
         </div>
 
@@ -150,7 +150,7 @@ const Navbar = () => {
             <div className="flex items-center justify-between py-2 hover:bg-gray-300 rounded cursor-pointer" >
               <span>About Us</span>
               <div onClick={() => setAboutOpen(!aboutOpen)}>
-              <FaChevronDown className="ml-1 w-4 h-4" />
+              <FaChevronDown className="mr-10 w-4 h-4" />
               </div>
             
             </div>
@@ -165,7 +165,7 @@ const Navbar = () => {
             <div className="flex items-center justify-between py-2 hover:bg-gray-300 rounded cursor-pointer" >
               <span>Branches</span>
               <div onClick={() => setBranchesOpen(!branchesOpen)}>
-              <FaChevronDown className="ml-1 w-4 h-4" />
+              <FaChevronDown className="mr-10 w-4 h-4" />
               </div>
 
             </div>
