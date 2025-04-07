@@ -117,7 +117,7 @@ const Homepage = () => {
 
   return (
 
-    <div  >
+    <div className="w-screen"  >
 
       <div className="h-[80vh] font-sans relative w-full">
 

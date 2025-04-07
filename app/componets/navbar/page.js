@@ -147,9 +147,12 @@ const Navbar = () => {
           <div className="bg-gray-50 p-4 shadow-xl text-black rounded-lg  block lg:hidden">
 
             <a href="/allpages/home" className="block py-2 hover:bg-gray-300 rounded">Home</a>
-            <div className="flex items-center justify-between py-2 hover:bg-gray-300 rounded cursor-pointer" onClick={() => setAboutOpen(!aboutOpen)}>
+            <div className="flex items-center justify-between py-2 hover:bg-gray-300 rounded cursor-pointer" >
               <span>About Us</span>
+              <div onClick={() => setAboutOpen(!aboutOpen)}>
               <FaChevronDown className="ml-1 w-4 h-4" />
+              </div>
+            
             </div>
             {aboutOpen && (
               <div className="pl-6 bg-gray-400 rounded-md">
@@ -159,9 +162,12 @@ const Navbar = () => {
               </div>
             )}
             <a href="/allpages/services" className="block py-2 hover:bg-gray-300 rounded">Services</a>
-            <div className="flex items-center justify-between py-2 hover:bg-gray-300 rounded cursor-pointer" onClick={() => setBranchesOpen(!branchesOpen)}>
+            <div className="flex items-center justify-between py-2 hover:bg-gray-300 rounded cursor-pointer" >
               <span>Branches</span>
+              <div onClick={() => setBranchesOpen(!branchesOpen)}>
               <FaChevronDown className="ml-1 w-4 h-4" />
+              </div>
+
             </div>
             {branchesOpen && (
               <div className="pl-6 bg-gray-400 rounded-md">
