@@ -37,7 +37,7 @@ const Navbar = () => {
       {/**  desktop view navbar */}
       <div className="flex items-center justify-center">
         <div
-          className={`  bg-[#0b58a5]  py-2 px-4 hidden lg:flex justify-around items-center text-white text-md transition-all duration-300 z-50 
+          className={`bg-[#0b58a5]  py-2 px-4 hidden lg:flex justify-around items-center text-white text-md transition-all duration-300 z-50 
           ${isScrolled ? "w-full fixed top-0 rounded-none z-50" : "top-10 fixed w-8/10 rounded-t-xl"}`}
         >
           <a href="/allpages/patients">For Patients</a>
@@ -124,7 +124,7 @@ const Navbar = () => {
       </div>
 
       {/**  Mobile and tablet view navbar */}
-        <div className="bg-[#0b58a5] text-white fixed top-0 w-full z-50 shadow-lg  block lg:hidden">
+        <div className="bg-[#0b58a5] text-white fixed top-0 w-screen z-50 shadow-lg  block lg:hidden">
 
         <div className="flex justify-around items-center py-2 border-b border-gray-200">
           <a href="/allpages/patients" className="text-white hover:text-gray-300">For Patients</a>
