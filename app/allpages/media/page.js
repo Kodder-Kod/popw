@@ -15,7 +15,7 @@ const news = [
     {
         title: "World Glaucoma Week",
         description: "Join us in raising awareness about glaucoma, its prevention, and early detection to prevent vision loss.",
-        image: "/hat.jpg",
+        image: "/seh_logo.png",
         link: "#",
     },
     {
@@ -120,10 +120,10 @@ const Media = () => {
                     {/* Navbar */}
                     <Navbar />
 
-                    <div className="relative  h-full flex items-center justify-start px-40">
+                    <div className="relative  h-full flex items-center justify-start md:px-40">
                         {/* Centered Content */}
                         <div className="z-10 text-left text-black px-4">
-                            <h1 className="text-5xl font-extrabold text-shadow-lg ">Media</h1> {/* Added text shadow */}
+                            <h1 className="text-3xl md:text-5xl font-extrabold text-shadow-lg ">Media</h1> {/* Added text shadow */}
                         </div>
                     </div>
                 </div>
@@ -141,7 +141,7 @@ const Media = () => {
                 {topics.map((topic, index) => (
                     <SwiperSlide key={index}>
                         <div className="w-full text-center mb-4">
-                            <h1 className="text-3xl font-bold text-black rounded-lg  inline-block">
+                            <h1 className="text-2xl sm:text-3xl font-bold text-[#0b58a5] rounded-lg  inline-block">
                                 {topic.title}
                             </h1>
                         </div>
@@ -159,8 +159,8 @@ const Media = () => {
                                         <Image
                                             src={src}
                                             alt={`Gallery ${imgIndex + 1}`}
-                                            width={180} // You can specify the width here
-                                            height={120} 
+                                            width={800} // You can specify the width here
+                                            height={600}
                                             className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
                                         />
                                     </div>
@@ -174,7 +174,7 @@ const Media = () => {
             {/* The News Room */}
 
             <div className="relative w-full h-auto bg-blue-100 py-8">
-                <div className="absolute inset-0">
+                <div className="absolute inset-0 overflow-hidden">
                     {[
                         // Enhanced Top-left corner (Fading to South-East)
                         { top: 0, left: 0, count: 16, scaleDir: 1, opacityDir: 1 },
@@ -214,7 +214,7 @@ const Media = () => {
 
                 <div className="h-auto bg-blue-100 ">
                     <div className="w-[85%] mx-auto">
-                        <h2 className="text-3xl font-bold text-black text-center mb-6 relative z-10">The NewsRoom</h2>
+                        <h2 className="text-2xl md:text-3xl  font-bold text-black text-center mb-6 relative z-10">Latest Events & News</h2>
                         <div className="grid grid-cols-1 md:grid-cols-5 gap-5 mt-10 relative z-10">
                             {news.map((service, index) => (
                                 <motion.div
@@ -229,25 +229,36 @@ const Media = () => {
                                         src={service.image}
                                         alt={service.title}
                                         width={180} // You can specify the width here
-                                        height={120} 
-                                        className="w-full h-56 object-cover rounded-t-2xl mb-4"
+                                        height={120}
+                                        className="w-full h-48 md:56 object-cover rounded-t-2xl mb-4"
                                     />
-                                    <div className="p-6">
-                                        <h3 className="text-xl font-semibold text-[#0b58a5] mb-2">{service.title}</h3>
-                                        <p className="text-black leading-relaxed">{service.description}</p>
-                                        <a href={service.link} className="text-blue-600 font-semibold mt-4 inline-block">
+
+                                    <div className="p-4 sm:p-6">
+                                        <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-[#0b58a5] mb-2">
+                                            {service.title}
+                                        </h3>
+                                        <p className="text-sm sm:text-base text-black leading-relaxed">
+                                            {service.description}
+                                        </p>
+                                        <a
+                                            href={service.link}
+                                            className="text-blue-600 font-semibold mt-3 sm:mt-4 inline-block text-sm sm:text-base"
+                                        >
                                             Learn more →
                                         </a>
                                     </div>
+
                                 </motion.div>
                             ))}
                         </div>
                     </div>
 
                 </div>
+
+
             </div>
-            <div className="bg-white min-h-auto p-8">
-                <h1 className="text-4xl font-bold text-center text-blue-900 mb-6">Annual Reports</h1>
+            <div className="bg-white min-h-auto p-6">
+                <h1 className="text-2xl sm:text-3xl font-bold text-center text-blue-900 mb-6">Annual Reports</h1>
 
                 {/* Tab Design for Year Selection */}
                 <div className="flex flex-wrap justify-center gap-2 mb-6">
@@ -255,7 +266,7 @@ const Media = () => {
                         <button
                             key={year}
                             onClick={() => setSelectedYear(year)}
-                            className={`px-4 py-2 rounded-full font-semibold transition-all duration-300 ${selectedYear === year
+                            className={`px-4 py-2 rounded-full font-semibold transition-all duration-300 text-sm sm:text-md ${selectedYear === year
                                 ? "bg-[#0b58a5] text-white shadow-md"
                                 : "bg-gray-200 text-gray-700 hover:bg-gray-200 hover:text-blue-600"
                                 }`}
@@ -268,23 +279,26 @@ const Media = () => {
 
                 {/* Report Display Section */}
 
-                <div className="bg-white max-w-7xl mx-auto ">
+                <div className="bg-white w-full sm:max-w-7xl mx-auto ">
                     {/* Report Details */}
 
-                    <div className='grid md:grid-cols-2 gap-5 items-center text-lg'>
+                    <div className='grid grid-cols-1  md:grid-cols-2 gap-5 md:gap-10 lg:gap-16 items-center '>
 
-                        <div >
-                            <h2 className="text-2xl font-bold text-blue-900 mb-4">Annual Report {selectedYear}</h2>
-                            <p className="text-lg text-gray-700 my-15 p-1">{reports[selectedYear].text}</p>
+                        <div
+                            className="items-center" >
+                            <h2 className="hidden md:block text-xl sm:text:2xl font-bold text-blue-900 mb-4">Annual Report {selectedYear}</h2>
+                            <p className="text-md sm:text-lg text-gray-700 mb-7 sm:my-15 p-1">{reports[selectedYear].text}</p>
 
                             {/* Download Button */}
-                            <a
-                                href={reports[selectedYear].file}
-                                download
-                                className="bg-[#0b58a5] text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-800 transition"
-                            >
-                                Download {selectedYear} Report
-                            </a>
+                            <div className="flex justify-center md:justify-start">
+                                <a
+                                    href={reports[selectedYear].file}
+                                    download
+                                    className="bg-[#0b58a5] text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-800 transition"
+                                >
+                                    Download {selectedYear} Report
+                                </a>
+                            </div>
                         </div>
 
                         {/* Report Image */}

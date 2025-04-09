@@ -75,43 +75,82 @@ const Questions = () => {
           {/* Navbar */}
           <Navbar />
 
-          <div className="relative  h-full flex items-center justify-start px-40">
+          <div className="relative  h-full flex items-center justify-start md:px-40">
             {/* Centered Content */}
             <div className="z-10 text-left text-black px-4">
-              <h1 className="text-5xl font-extrabold text-shadow-lg ">Frequently Asked Questions</h1> {/* Added text shadow */}
+              <h1 className="text-3xl md:text-5xl font-extrabold text-shadow-lg ">Frequently Asked Questions</h1> {/* Added text shadow */}
             </div>
           </div>
         </div>
       </div>
 
 
+      <div className="relative w-full h-auto bg-blue-100 py-8">
+        <div className="absolute inset-0  overflow-hidden">
+          {[
+            // Enhanced Top-left corner (Fading to South-East)
+            { top: 0, left: 0, count: 16, scaleDir: 1, opacityDir: 1 },
+            // Top-right corner (Fading to South-West)
+            { top: 0, right: 0, count: 16, scaleDir: -1, opacityDir: 1 },
+            // Bottom-left corner (Fading to North-East)
+            { bottom: 0, left: 0, count: 16, scaleDir: 1, opacityDir: -1 },
+            // Bottom-right corner (Fading to North-West)
 
+          ].map((pos, index) => (
+            <div
+              key={index}
+              className="absolute grid grid-cols-4 grid-rows-4 gap-1"
+              style={pos}
+            >
+              {Array.from({ length: pos.count }).map((_, hexIndex) => (
+                <div
+                  key={hexIndex}
+                  className="flex items-center justify-center"
+                  style={{
+                    transform: `scale(${1 - hexIndex * 0.05 * pos.scaleDir})`,
+                    opacity: 0.3 - hexIndex * 0.05 * pos.opacityDir,
+                  }}
+                >
+                  <div
+                    className="w-10 h-10 bg-blue-300"
+                    style={{
+                      clipPath:
+                        'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)',
+                    }}
+                  ></div>
+                </div>
+              ))}
+            </div>
+          ))}
+        </div>
 
-        <div className="grid md:grid-cols-2 gap-10 items-center text-lg  max-w-7xl mx-auto rounded-2xl ">
-          <div className="mb-6">
+        <div className="grid md:grid-cols-2 gap-10 items-center  max-w-7xl mx-auto rounded-2xl sm:p-0 p-6 ">
+          <div className="sm:mb-6">
             {faq.slice(0, 7).map((step, index) => (
-              <div key={index} className='mb-20'>
-                <p className="text-[#0b58a5]  mb-2 text-2xl ">
+              <div key={index} className='mb-10 sm:mb-20'>
+                <p className="text-[#0b58a5]  mb-2 sm:text-xl text:lg ">
                   <strong>{index + 1}. {step.question}</strong>
                 </p>
-                <p className="text-black mb-4">{step.answer}</p>
+                <p className="text-black mb-4 sm:text-lg text:md ">{step.answer}</p>
               </div>
             ))}
           </div>
 
           <div>
             {faq.slice(7).map((step, index) => (
-              <div key={index + 8} className='mb-20'>
-                  <p className="text-[#0b58a5]  mb-2 text-2xl ">
+              <div key={index + 8} className='sm:mb-20 mb-10'>
+                <p className="text-[#0b58a5]  mb-2 sm:text-xl text:lg ">
                   <strong>{index + 8}. {step.question}</strong>
                 </p>
-                <p className="text-black mb-4">{step.answer}</p>
+                <p className="text-black mb-4 sm:text-lg text:md">{step.answer}</p>
               </div>
             ))}
           </div>
         </div>
 
-     
+
+      </div>
+
     </div>
   )
 }

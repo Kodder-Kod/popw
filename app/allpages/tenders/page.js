@@ -66,10 +66,10 @@ const Tenders = () => {
                     {/* Navbar */}
                     <Navbar />
 
-                    <div className="relative  h-full flex items-center justify-start px-40">
+                    <div className="relative  h-full flex items-center justify-start md:px-40">
                         {/* Centered Content */}
                         <div className="z-10 text-left text-black px-4">
-                            <h1 className="text-5xl font-extrabold text-shadow-lg ">Tenders</h1> {/* Added text shadow */}
+                            <h1 className="text-3xl md:text-5xl font-extrabold text-shadow-lg ">Tenders</h1> {/* Added text shadow */}
                         </div>
                     </div>
                 </div>
@@ -77,20 +77,23 @@ const Tenders = () => {
 
 
             <div className="bg-white h-auto p-6">
-                <div className="max-w-[75%] m-auto  bg-white rounded-lg p-8">
-                    <h2 className="text-3xl font-bold text-blue-900 mb-6"></h2>
-                    <div className="grid md:grid-cols-2 gap-5 items-center text-lg">
+                <div className="w-full sm:max-w-[75%] m-auto  bg-white rounded-lg sm:p-8">
+                    <h2 className="text-2xl sm:text-3xl font-bold text-blue-900 mb-6"></h2>
+                    <div className="grid md:grid-cols-2 gap-5 md:gap-10 lg:gap-16 items-center ">
 
                         <div>
                             <Image
                                 src="/seh_logo.png"
-                                alt="Kenya Power Workers"
+                                 alt="Seh_pic"
                                 width={300}
                                 height={300}
-                                className="rounded-4xl shadow-md"
+                                className="rounded-3xl shadow-lg hover:scale-105 transition duration-300 w-[100%] sm:w-[95%] md:max-w-lg lg:max-w-full mx-auto"
+
                             />
                         </div>
-                        <div>
+                        <div
+                           className='mt-3 sm:mt-6 md:mt-0  text-black text-md md:text-lg  leading-relaxed w-full'
+                           >
                             <p className="text-black mb-4">
                                 Sabatia Eye Hospital invites eligible suppliers and service providers to participate in our tendering process. We are committed to transparency and fairness in procurement.
                             </p>
@@ -113,7 +116,7 @@ const Tenders = () => {
                         // Top-right corner (Fading to South-West)
                         { top: 0, right: 0, count: 16, scaleDir: -1, opacityDir: 1 },
                         // Bottom-left corner (Fading to North-East)
-                        { bottom: 0, left: 0, count: 16, scaleDir: 1, opacityDir: -1 },
+                     
                         // Bottom-right corner (Fading to North-West)
 
                     ].map((pos, index) => (
@@ -128,7 +131,7 @@ const Tenders = () => {
                                     className="flex items-center justify-center"
                                     style={{
                                         transform: `scale(${1 - hexIndex * 0.05 * pos.scaleDir})`,
-                                        opacity: 0.95 - hexIndex * 0.05 * pos.opacityDir,
+                                        opacity: 0.3 - hexIndex * 0.05 * pos.opacityDir,
                                     }}
                                 >
                                     <div
@@ -145,7 +148,7 @@ const Tenders = () => {
                 </div>
 
                 <div className="max-w-5xl mx-auto p-4">
-                    <h1 className="text-2xl font-bo">Latest Tenders</h1>
+                    <h1 className="text-xl sm:text-2xl font-bold m-5">Latest Tenders</h1>
                     <input
                         type="text"
                         placeholder="Search tenders..."
@@ -157,7 +160,7 @@ const Tenders = () => {
                         {currentTenders.map((tender, index) => (
                             <div key={index} className="border-b pb-2">
                                 <p className="text-black text-sm">Notice Date: {tender.date}</p>
-                                <p className="text-lg font-semibold">{tender.title}</p>
+                                <p className="text-md font-semibold">{tender.title}</p>
                                 <p className="text-black text-sm">Deadline: {tender.deadline}</p>
                                 <div className="text-black text-sm flex items-center">
                                     <span>Status:</span>

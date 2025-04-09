@@ -76,7 +76,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-gray-900 text-white py-10  w-full  max-w-full ">
+    <footer className="bg-gray-900 text-white py-10  w-screen   ">
       {/* Main container with background color and padding */}
       <div className="mx-auto px-6">
         {/* Grid layout for footer sections - responsive with 1, 2, or 4 columns */}

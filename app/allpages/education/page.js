@@ -16,10 +16,10 @@ const Education = () => {
                     {/* Navbar */}
                     <Navbar />
 
-                    <div className="relative  h-full flex items-center justify-start px-40">
+                    <div className="relative  h-full flex items-center justify-start md:px-40">
                         {/* Centered Content */}
                         <div className="z-10 text-left text-black px-4">
-                            <h1 className="text-5xl font-extrabold text-shadow-lg ">Education</h1> {/* Added text shadow */}
+                            <h1 className="text-3xl md:text-5xl font-extrabold text-shadow-lg ">Education & Training</h1> {/* Added text shadow */}
                         </div>
                     </div>
                 </div>
@@ -28,20 +28,22 @@ const Education = () => {
             {/* Bachelor of Science in Comprehensive Ophthalmology And Cataract Surgery*/}
 
             <div className="bg-white h-auto p-6">
-                <div  className="max-w-[85%] m-auto  bg-white rounded-lg p-8">
-                    <h2 className="text-3xl font-bold text-blue-900 mb-6">Bachelor of Science in Comprehensive Ophthalmology And Cataract Surgery</h2>
-                    <div className="grid md:grid-cols-2 gap-5 items-center text-lg">
+                <div className="w-full sm:max-w-[85%] m-auto  bg-white rounded-lg sm:p-8">
+                    <h2 className="text-2xl sm:text-3xl font-bold text-blue-900 mb-6">Bachelor of Science in Comprehensive Ophthalmology And Cataract Surgery</h2>
+                    <div className="grid md:grid-cols-2 gap-5 md:gap-10 lg:gap-16items-center ">
 
                         <div >
                             <Image
                                 src="/seh_logo.png"
-                                alt="Kenya Power Workers"
+                                alt="Seh_pic"
                                 width={600}
                                 height={600}
-                                className="rounded-4xl shadow-md"
+                                className="rounded-3xl shadow-lg hover:scale-105 transition duration-300 w-[100%] sm:w-[95%] md:max-w-lg lg:max-w-full mx-auto"
                             />
                         </div>
-                        <div>
+                        <div
+                            className='mt-3 sm:mt-6 md:mt-0  text-black text-md md:text-lg  leading-relaxed w-full'
+                        >
                             <p className="text-black mb-4 leading-relaxed ">
                                 Sabatia Eye Hospital has embraced training of Human Resource for Eye Health as one of its Strategic Directions. The hospital has entered into a partnership with <span className="font-semibold">Jomo Kenyatta University of Science and Technology</span> to provide a <span className="font-semibold">Bachelor of Science degree in Clinical Medicine (Comprehensive Ophthalmology and Cataract Surgery)</span>.
                             </p>
@@ -60,13 +62,13 @@ const Education = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: false, amount: 0.2 }}
                     transition={{ duration: 0.6, ease: "easeOut" }}
-                    className="grid md:grid-cols-1 gap-5 items-center text-lg mt-2 max-w-2xl bg-[#0b58a5] mx-auto rounded-2xl p-10"
+                    className="grid md:grid-cols-1 gap-5 items-center mt-2 max-w-2xl bg-[#0b58a5] mx-auto rounded-2xl p-6 sm:p-10 "
                 >
                     <div>
-                        <p className="text-white text-2xl font-bold mb-4">Qualification</p>
-                        <ul className="list-disc pl-5 space-y-2">
-                            <li className="text-gray-100">Diploma in Clinical Medicine / HND in Clinical Medicine (Cataract Surgery).</li>
-                            <li className="text-gray-100">Must be a registered member of the Clinical Officers Council of Kenya (COC).</li>
+                        <p className="text-white sm:text-2xl text-xl font-bold mb-4">Qualification</p>
+                        <ul className="list-disc pl-5 space-y-2 ">
+                            <li className="text-gray-100 sm:text-lg text-md ">Diploma in Clinical Medicine / HND in Clinical Medicine (Cataract Surgery).</li>
+                            <li className="text-gray-100 sm:text-lg text-md">Must be a registered member of the Clinical Officers Council of Kenya (COC).</li>
                         </ul>
                     </div>
                 </motion.div>
@@ -76,15 +78,14 @@ const Education = () => {
 
 
             <div className="relative w-full h-auto bg-blue-100 py-8">
-                <div className="absolute inset-0">
+                <div className="absolute inset-0 overflow-hidden">
                     {[
                         // Enhanced Top-left corner (Fading to South-East)
                         { top: 0, left: 0, count: 16, scaleDir: 1, opacityDir: 1 },
                         // Top-right corner (Fading to South-West)
                         { top: 0, right: 0, count: 16, scaleDir: -1, opacityDir: 1 },
                         // Bottom-left corner (Fading to North-East)
-                        { bottom: 0, left: 0, count: 16, scaleDir: 1, opacityDir: -1 },
-                        // Bottom-right corner (Fading to North-West)
+              
 
                     ].map((pos, index) => (
                         <div
@@ -98,7 +99,7 @@ const Education = () => {
                                     className="flex items-center justify-center"
                                     style={{
                                         transform: `scale(${1 - hexIndex * 0.05 * pos.scaleDir})`,
-                                        opacity: 0.95 - hexIndex * 0.05 * pos.opacityDir,
+                                        opacity: 0.6 - hexIndex * 0.05 * pos.opacityDir,
                                     }}
                                 >
                                     <div
@@ -123,22 +124,23 @@ const Education = () => {
                         viewport={{ once: false, amount: 0.2 }}
                         transition={{ duration: 0.5 }}
 
-                        className="max-w-[85%] m-auto  rounded-lg p-8">
-                        <h2 className="text-3xl font-bold text-blue-900 mb-6">Ophthalmic Skills Upgrading Course (OSUC)</h2>
-                        <div className="grid md:grid-cols-2 gap-5 items-center text-lg">
+                        className="w-full sm:max-w-[85%]m-auto  rounded-lg sm:p-8">
+                        <h2 className="text-2xl md:text-3xl font-bold text-blue-900 mb-6">Ophthalmic Skills Upgrading Course (OSUC)</h2>
+                        <div className="grid md:grid-cols-2 gap-5 md:gap-10 lg:gap-16 items-center ">
                             <motion.div
                                 initial={{ opacity: 0, x: -50 }}
                                 whileInView={{ opacity: 1, x: 0 }}
                                 viewport={{ once: false, amount: 0.3 }}
                                 transition={{ duration: 0.6 }}
+                                className='mt-3 sm:mt-6 md:mt-0  text-black text-md md:text-lg  leading-relaxed w-full'
                             >
-                                <p className="text-black mb-4 leading-relaxed text-lg">
+                                <p className="text-black mb-4 leading-relaxed ">
                                     An <span className="font-semibold">ophthalmic skill upgrading training</span> is one strategy the hospital utilizes to reduce the shortage of eye care workers in the country. The uptake of the training has been impressive over the years, as it has not only helped to reduce the gap in human resources but also improved the <span className="font-semibold">quality and accessibility</span> of eye care services in Kenya and other Eastern African countries through prompt and appropriate referrals.
                                 </p>
-                                <p className="text-black mb-4 leading-relaxed text-lg">
+                                <p className="text-black mb-4 leading-relaxed ">
                                     The hospital has trained a total of <span className="font-semibold">408 healthcare workers</span> in ophthalmic skills. Among them, <span className="font-semibold">six were from Rwanda, six from Burundi, three from Malawi, and fourteen from South Sudan</span>. The training is designed to ensure that trainees receive <span className="font-semibold">adequate practical exposure</span> while at the hospital.
                                 </p>
-                                <p className="text-black leading-relaxed text-lg">
+                                <p className="text-black leading-relaxed ">
                                     Upon completion, they receive <span className="font-semibold">basic equipment and support visits</span> from the Ministry of Health and Sabatia for onsite assistance. Our trainees have been performing exceptionally well in managing eye conditions across the country, especially in <span className="font-semibold">arid and marginalized areas</span>, where they have been incorporated into various eye health programs. This is evident from the number of <span className="font-semibold">treated and referred patients</span> submitted by our trainees.
                                 </p>
                             </motion.div>
@@ -150,10 +152,11 @@ const Education = () => {
                                 transition={{ duration: 0.5, delay: 0.2 }}>
                                 <Image
                                     src="/seh_logo.png"
-                                    alt="Kenya Power Workers"
+                                    alt="Seh_pic"
                                     width={600}
                                     height={600}
-                                    className="rounded-4xl shadow-md"
+                                    className="rounded-3xl shadow-lg hover:scale-105 transition duration-300 w-[100%] sm:w-[95%] md:max-w-lg lg:max-w-full mx-auto"
+
                                 />
                             </motion.div>
 
@@ -178,8 +181,8 @@ const Education = () => {
 
                             {/* Left Section */}
                             <div className="w-full md:w-1/3">
-                                <h2 className="text-2xl font-bold text-white mb-4">Areas of Specialization</h2>
-                                <ul className="text-white space-y-2 list-disc list-inside">
+                                <h2 className="text-xl sm:text-2xl font-bold text-white mb-1 sm:mb-4">Areas of Specialization</h2>
+                                <ul className="text-white sm:space-y-2 space-y-0 list-disc list-inside text-md">
                                     <li>Refractions and Low Vision</li>
                                     <li>Optical Technicians</li>
                                     <li>Theatre Assistants</li>
@@ -187,7 +190,7 @@ const Education = () => {
                                 </ul>
                             </div>
 
-                            <div className="h-auto w-1 bg-gray-300 mx-4 md:mx-8"></div>
+                            <div className="h-auto w-1 bg-gray-300 mx-4 md:mx-8 hidden sm:block"></div>
 
                             {/* Right Section (Divided into 2) */}
                             <div className="w-full md:w-2/3 flex flex-col">
@@ -195,7 +198,7 @@ const Education = () => {
                                 {/* Top Right Section */}
                                 <div className="flex flex-col md:flex-row justify-between items-start">
                                     <div className="flex-1">
-                                        <h2 className="text-2xl font-bold text-white mb-4">Minimum Qualification</h2>
+                                        <h2 className="text-xl sm:text-2xl font-bold text-white mb-1 sm:mb-4">Minimum Qualification</h2>
                                         <ul className="text-white list-disc pl-5">
                                             <li>Diploma in Nursing</li>
                                             <li>Diploma in Clinical Medicine</li>
@@ -203,10 +206,10 @@ const Education = () => {
                                         </ul>
                                     </div>
 
-                                    <div className="h-16 w-1 bg-gray-300 mx-4 md:mx-8"></div>
+                                    <div className="h-16 w-1 bg-gray-300 mx-4 md:mx-8 hidden sm:block"></div>
 
-                                    <div className="flex-1">
-                                        <h2 className="text-2xl font-bold text-white mb-4">Course Duration</h2>
+                                    <div className="flex-1 mt-7 sm:mt-0">
+                                        <h2 className="text-xl sm:text-2xl font-bold text-white mb:1 sm:mb-4">Course Duration</h2>
                                         <div className="text-white">
                                             <ul className="list-disc pl-5">
                                                 <li>12 Weeks (3 Months)</li>
@@ -216,10 +219,10 @@ const Education = () => {
                                 </div>
 
                                 {/* Bottom Right Section */}
-                                <div className="mt-8 pt-4 border-t border-gray-300">
+                                <div className="sm:mt-8 pt-4 sm:border-t sm:border-gray-300">
                                     <div className="flex flex-col md:flex-row justify-between items-start">
-                                        <div className="flex-1">
-                                            <h2 className="text-2xl font-bold text-white mb-4">Intakes</h2>
+                                        <div className="flex-1 mt-4 sm:mt-0">
+                                            <h2 className="text-xl sm:text-2xl font-bold text-white mb-1 sm:mb-4">Intakes</h2>
                                             <div className="text-white">
                                                 <ul className="list-disc pl-5">
                                                     <li>February</li>
@@ -229,10 +232,10 @@ const Education = () => {
                                             </div>
                                         </div>
 
-                                        <div className="h-16 w-1 bg-gray-300 mx-4 md:mx-8"></div>
+                                        <div className="h-16 w-1 bg-gray-300 mx-4 md:mx-8 hidden sm:block"></div>
 
-                                        <div className="flex-1">
-                                            <h2 className="text-2xl font-bold text-white mb-4">Application</h2>
+                                        <div className="flex-1 mt-7 sm:mt-0">
+                                            <h2 className="text-xl sm:text-2xl font-bold text-white mb-1 sm:mb-4">Application</h2>
                                             <p className="text-white">
                                                 Application can be made to <br />
                                                 <a href="mailto:training@sabatiaeyehospital.org" className="text-white font-medium">
@@ -260,9 +263,9 @@ const Education = () => {
                     viewport={{ once: false, amount: 0.2 }}
                     transition={{ duration: 0.5 }}
 
-                    className="max-w-[85%] m-auto  bg-white rounded-lg p-8">
-                    <h2 className="text-3xl font-bold text-blue-900 mb-6">Other Trainings</h2>
-                    <div className="grid md:grid-cols-2 gap-5 items-center text-lg">
+                    className="w-full sm:max-w-[85%] m-auto  bg-white rounded-lg sm:p-8">
+                    <h2 className="text-2xl md:text-3xl font-bold text-blue-900 mb-6">Other Trainings</h2>
+                    <div className="grid md:grid-cols-2  gap-5 md:gap-10 lg:gap-16 items-center ">
 
                         {/* Image Container */}
                         <motion.div
@@ -272,7 +275,7 @@ const Education = () => {
                             transition={{ duration: 0.6 }}
                             className="relative  ">
                             {/* Main Image */}
-                            < div className='right-20' >
+                            < div className='right-20 hidden sm:block ' >
                                 <Image
                                     src="/seh_logo.png" // Replace with your main image path
                                     alt="Doctor smiling"
@@ -288,8 +291,8 @@ const Education = () => {
                                 whileInView={{ opacity: 1, scale: 1 }}
                                 viewport={{ once: false, amount: 0.3 }}
                                 transition={{ duration: 0.5, delay: 0.2 }}
-                                className="absolute bottom-1 right-6 bg-white p-1 rounded-lg shadow-lg">
-
+                                className="sm:absolute -bottom-6 bg-white p-1 rounded-lg shadow-lg"
+                                >
                                 <Image
                                     src="/seh_logo.png" // Replace with your second image path
                                     alt="Doctor with patient"
@@ -303,7 +306,9 @@ const Education = () => {
                             initial={{ opacity: 0, x: -50 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: false, amount: 0.3 }}
-                            transition={{ duration: 0.6 }}>
+                            transition={{ duration: 0.6 }}
+                            className='mt-3 sm:mt-6 md:mt-0  text-black text-md md:text-lg  leading-relaxed w-full'
+                            >
                             <p className="text-black mb-4">
                                 Sabatia Eye hospital also works with other training institutions in the Country to provide practical trainings for both Middle and high cadre eye care trainings
                             </p>

@@ -40,10 +40,10 @@ const Board = () => {
                     {/* Navbar */}
                     <Navbar />
 
-                    <div className="relative h-full flex items-center justify-start px-40">
+                    <div className="relative h-full flex items-center justify-start md:px-40">
                         {/* Centered Content */}
                         <div className="z-10 text-left text-black px-4">
-                            <h1 className="text-5xl font-extrabold text-shadow-lg ">Board of Members</h1> {/* Added text shadow */}
+                            <h1 className="text-3xl md:text-5xl font-extrabold text-shadow-lg ">Board of Members</h1> {/* Added text shadow */}
                         </div>
                     </div>
                 </div>
@@ -61,12 +61,12 @@ const Board = () => {
                             viewport={{ once: false, amount: 0.2 }}
                             transition={{ duration: 0.7, delay: index * 0.1 }}
                             key={index}
-                            className="relative h-64 rounded-2xl shadow-md overflow-hidden bg-cover bg-center"
+                            className="relative h-48 md:h-64 rounded-2xl shadow-md overflow-hidden bg-cover  bg-center"
                             style={{ backgroundImage: `url(${person.image})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
                             <div className="absolute inset-0  bg-opacity-50"></div>
                             <div className="absolute bottom-0 left-0 w-full text-white p-4 bg-gradient-to-t from-black to-transparent">
-                                <h3 className="text-xl font-bold">{person.name}</h3>
-                                <p className="text-lg font-medium">{person.position}</p>
+                                <h3 className="text-lg md:text-xl font-bold">{person.name}</h3>
+                                <p className=" text-md md:text-lg font-medium">{person.position}</p>
                             </div>
                         </motion.div>
                     ))}

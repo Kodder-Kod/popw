@@ -9,7 +9,7 @@ const services = [
     {
         title: "General Ophthalmology",
         description: "Comprehensive eye care services, including diagnosis, treatment, and management of various eye conditions.",
-        image: "/hat.jpg",
+        image: "/seh_logo.png",
         link: "#",
     },
     {
@@ -63,10 +63,10 @@ const Kisumu = () => {
                     {/* Navbar */}
                     <Navbar />
 
-                    <div className="relative  h-full flex items-center justify-start px-40">
+                    <div className="relative  h-full flex items-center justify-start md:px-40">
                         {/* Centered Content */}
                         <div className="z-10 text-left text-black px-4">
-                            <h1 className="text-5xl font-extrabold text-shadow-lg ">Kisumu Branch</h1> {/* Added text shadow */}
+                            <h1 className="text-3xl md:text-5xl font-extrabold text-shadow-lg ">Kisumu Branch</h1> {/* Added text shadow */}
                         </div>
                     </div>
                 </div>
@@ -75,20 +75,22 @@ const Kisumu = () => {
             {/* Hero section Kisumu clinic */}
             <div className="bg-white h-auto p-6">
 
-                <div className="max-w-[85%] m-auto  bg-white rounded-lg p-8">
-                    <h2 className="text-3xl font-bold text-blue-900 mb-6">Kisumu Clinic</h2>
-                    <div className="grid md:grid-cols-2 gap-5 items-center text-lg">
+                <div className="w-full sm:max-w-[85%] m-auto  bg-white rounded-lg sm:p-8">
+                    <h2 className="text-2xl md:text-3xl font-bold text-blue-900 mb-6">Kisumu Clinic</h2>
+                    <div className="grid md:grid-cols-2 gap-5 md:gap-10 lg:gap-16 items-center ">
 
                         <div>
                             <Image
                                 src="/seh_logo.png"
-                                alt="Kenya Power Workers"
+                                 alt="Seh_pic"
                                 width={600}
                                 height={600}
-                                className="rounded-4xl shadow-md"
+                                 className="rounded-4xl shadow-lg hover:scale-105 transition duration-300 w-[100%] sm:w-[95%] md:max-w-lg lg:max-w-full mx-auto"
                             />
                         </div>
-                        <div >
+                        <div 
+                          className='mt-3 sm:mt-6 md:mt-0  text-black text-md md:text-lg  leading-relaxed w-full'
+                        >
                             <p className="text-black leading-relaxed mb-4">
                                 Located in the quiet <span className="font-semibold">Milimani area</span> along Lodwar Road, our Kisumu Clinic is just a short <span className="font-semibold">10-minute walk</span> from the Central Business District, ensuring accessibility for all.
                             </p>
@@ -109,7 +111,7 @@ const Kisumu = () => {
                         // Top-right corner (Fading to South-West)
                         { top: 0, right: 0, count: 16, scaleDir: -1, opacityDir: 1 },
                         // Bottom-left corner (Fading to North-East)
-                        { bottom: 0, left: 0, count: 16, scaleDir: 1, opacityDir: -1 },
+
                         // Bottom-right corner (Fading to North-West)
 
                     ].map((pos, index) => (
@@ -124,7 +126,7 @@ const Kisumu = () => {
                                     className="flex items-center justify-center"
                                     style={{
                                         transform: `scale(${1 - hexIndex * 0.05 * pos.scaleDir})`,
-                                        opacity: 0.95 - hexIndex * 0.05 * pos.opacityDir,
+                                        opacity: 0.3 - hexIndex * 0.05 * pos.opacityDir,
                                     }}
                                 >
                                     <div
@@ -142,8 +144,8 @@ const Kisumu = () => {
 
                 {/* Services Kisumu  */}
 
-                <div className="py-5 px-6 w-[75%] mx-auto h-auto">
-                    <h2 className="text-3xl font-bold text-blue-900 m-10">Our Services</h2>
+                <div className="sm:py-5 px-6 w-full sm:max-w-[75%] mx-auto h-auto">
+                    <h2 className="text-2xl md:text-3xl font-bold text-blue-900 sm:m-10 ">Our Services</h2>
                     <div className=" grid grid-cols-1 md:grid-cols-3 gap-15 ">
                         {services.map((service, index) => (
                             <motion.div

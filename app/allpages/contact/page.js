@@ -49,10 +49,10 @@ const Contact = () => {
                     {/* Navbar */}
                     <Navbar />
 
-                    <div className="relative h-full flex items-center justify-start px-40">
+                    <div className="relative h-full flex items-center justify-start md:px-40">
                         {/* Centered Content */}
                         <div className="z-10 text-left text-black px-4">
-                            <h1 className="text-5xl font-extrabold text-shadow-lg ">Contact Us</h1> {/* Added text shadow */}
+                            <h1 className="text-3xl md:text-5xl font-extrabold text-shadow-lg ">Contact Us</h1> {/* Added text shadow */}
                         </div>
                     </div>
                 </div>
@@ -60,7 +60,7 @@ const Contact = () => {
 
 
             <div className="relative w-full h-auto bg-blue-100 py-8">
-                <div className="absolute inset-0">
+                <div className="absolute inset-0 overflow-hidden">
                     {[
                         // Enhanced Top-left corner (Fading to South-East)
                         { top: 0, left: 0, count: 16, scaleDir: 1, opacityDir: 1 },
@@ -101,42 +101,54 @@ const Contact = () => {
 
 
 
-                <div className="relative pt-5 pb-30">
-
+                <div className="relative pt-5 sm:pb-30 pb-10">
                     {/* Blue Area */}
-                    <div className="bg-[#0b58a5] shadow-lg rounded-3xl p-10 h-[70vh] max-w-7xl mx-auto relative">
+                    <div className="
+                        bg-[#0b58a5] shadow-lg rounded-3xl sm:p-10 p-3 sm:h-[70vh] h-[40vh]
+                        w-11/12 sm:w-10/12 md:w-9/12 lg:max-w-6xl 
+                        mx-auto relative hidden  sm:block
+                        ">
+
                         {/* Wording */}
-                        <div className="absolute top-1/4 left-10 text-white max-w-md">
-                            <h1 className="text-4xl font-bold">Get in Touch</h1>
-                            <p className="text-lg mt-2">
-                                We’re here to help! Reach out with any inquiries, and we’ll get back to you as soon as possible.
+                        <div className="absolute top-1/4 left-10 text-white max-w-sm">
+                            <h1 className="text-2xl  sm:text-3xl font-bold text-white">Get in Touch</h1>
+                            <p className="text-md sm:text-lg mt-2 text-white">
+                                We’re here to help! Contact Sabatia Eye Hospital with any questions , Enquiry , Compliments and even Complaints — we’ll get back to you shortly. Our team is always ready to assist you with care and professionalism.
                             </p>
+
+
                         </div>
                     </div>
 
 
-                    <div className="absolute top-1/3 left-2/3 -translate-x-1/2 -translate-y-1/4 bg-white shadow-lg rounded-3xl p-12 max-w-3xl w-full">
+                    <div className="
+                            relative 
+                            lg:absolute lg:top-1/3 lg:left-2/3 
+                            lg:-translate-x-1/2 lg:-translate-y-1/4 
+                            bg-white shadow-lg rounded-3xl p-12 max-w-3xl w-full 
+                            mx-auto text-md sm:text-lg
+                            ">
                         <p className="text-gray-600 text-base mb-6">
                             If you have any queries, feel free to reach out to us.
                         </p>
 
                         {/* Tabs */}
-                        <div className="flex space-x-3 mb-6">
+                        <div className="flex flex-wrap gap-3 mb-6 text-sm sm:text-base md:text-lg">
                             {["Enquiry", "Compliments", "Complaints", "Others"].map((tab) => (
                                 <button
                                     key={tab}
-                                    className={`px-5 py-3 text-base rounded ${formData.enquiryType === tab ? "bg-[#0b58a5] text-white" : "bg-gray-200"
+                                    className={`px-4 sm:px-5 py-2 sm:py-3 rounded-lg text-sm sm:text-base md:text-lg transition-colors duration-200 ${formData.enquiryType === tab ? "bg-[#0b58a5] text-white" : "bg-gray-200"
                                         }`}
-                                    onClick={() => handleTabChange(tab)} // ✅ Ensure tab is passed here
+                                    onClick={() => handleTabChange(tab)}
                                 >
                                     {tab}
                                 </button>
                             ))}
-
                         </div>
 
+
                         {/* Form */}
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div className="grid grid-cols-1 md:grid-cols-2 sm:gap-6 gap-3 text-md sm:text-lg">
                             {/* Show Enquiry Type Only for "Enquiry" */}
 
                             {/* Name & Email - Common for all */}
@@ -146,7 +158,7 @@ const Contact = () => {
                                 placeholder="Enter Name"
                                 value={formData.name}
                                 onChange={handleChange}
-                                className="border p-4 rounded w-full text-base"
+                                className="border p-4 sm:rounded rounded-xl w-full text-base"
                             />
 
                             <input
@@ -155,7 +167,7 @@ const Contact = () => {
                                 placeholder="Email"
                                 value={formData.email}
                                 onChange={handleChange}
-                                className="border p-4 rounded w-full text-base"
+                                className="border p-4 sm:rounded rounded-xl w-full text-base"
                             />
 
                             {/* Mobile - Common for all */}
@@ -167,7 +179,7 @@ const Contact = () => {
                                     placeholder="Enter Mobile No."
                                     value={formData.mobile}
                                     onChange={handleChange}
-                                    className="flex-1 outline-none"
+                                    className="flex-1 outline-none sm:rounded rounded-xl"
                                 />
                             </div>
 
@@ -176,7 +188,7 @@ const Contact = () => {
                                     name="enquiryType"
                                     value={formData.enquiryType}
                                     onChange={handleChange}
-                                    className="border p-3 rounded w-full text-base"
+                                    className="border p-3 sm:rounded rounded-xl w-full text-base"
                                 >
                                     <option value="">Select Enquiry Type</option>
                                     <option value="General">General</option>
@@ -191,7 +203,7 @@ const Contact = () => {
                                     name="hospital"
                                     value={formData.hospital}
                                     onChange={handleChange}
-                                    className="border p-3 rounded w-full text-base"
+                                    className="border p-3 sm:rounded rounded-xl w-full text-base"
                                 >
                                     <option value="">Select Hospital</option>
                                     <option value="Base_hosi">Base Hospital</option>
@@ -208,7 +220,7 @@ const Contact = () => {
                                     placeholder="Area of Concern (Department)"
                                     value={formData.department}
                                     onChange={handleChange}
-                                    className="border p-4 rounded w-full text-base"
+                                    className="border p-4 sm:rounded rounded-xl w-full text-base"
                                 />
                             )}
 
@@ -220,7 +232,7 @@ const Contact = () => {
                                     placeholder="Enter Subject"
                                     value={formData.subject}
                                     onChange={handleChange}
-                                    className="border p-4 rounded w-full text-base"
+                                    className="border p-4 sm:rounded rounded-xl w-full text-base"
                                 />
                             )}
                         </div>
@@ -231,12 +243,12 @@ const Contact = () => {
                             placeholder="Please enter remark here"
                             value={formData.remark}
                             onChange={handleChange}
-                            className="border p-4 rounded w-full mt-6 text-base"
+                            className="border p-4 sm:rounded rounded-xl w-full mt-6 text-base"
                         ></textarea>
 
                         {/* Submit Button */}
                         <button
-                            className="bg-[#0b58a5] text-white px-8 py-3 mt-6 rounded text-lg w-full"
+                            className="bg-[#0b58a5] text-white px-8 py-3 mt-6  rounded-xl text-lg sm:w-1/4 w-1/2"
                             onClick={() => console.log("Submit button clicked", formData)}
                         >
                             Submit
@@ -245,9 +257,9 @@ const Contact = () => {
 
                     </div>
 
-
-
                 </div>
+
+
             </div>
         </div>
     );

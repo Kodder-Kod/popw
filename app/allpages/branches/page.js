@@ -16,10 +16,10 @@ const Branches = () => {
                     {/* Navbar */}
                     <Navbar />
 
-                    <div className="relative  h-full flex items-center justify-start px-40">
+                    <div className="relative  h-full flex items-center justify-start md:px-40">
                         {/* Centered Content */}
                         <div className="z-10 text-left text-black px-4">
-                            <h1 className="text-5xl font-extrabold text-shadow-lg ">Branches</h1> {/* Added text shadow */}
+                            <h1 className="text-3xl md:text-5xl font-extrabold text-shadow-lg ">Branches</h1> {/* Added text shadow */}
                         </div>
                     </div>
                 </div>
@@ -30,20 +30,22 @@ const Branches = () => {
             {/* Main  Hopsital */}
 
             <div className="bg-white h-auto p-6">
-                <div className="max-w-[85%] m-auto  bg-white rounded-lg p-8">
-                    <h2 className="text-3xl font-bold text-blue-900 mb-6">Main Hospital (Sabatia)</h2>
-                    <div className="grid md:grid-cols-2 gap-5 items-center text-lg">
+                <div className="w-full sm:max-w-[85%] m-auto  bg-white rounded-lg sm:p-8">
+                    <h2 className="text-2xl md:text-3xl  font-bold text-blue-900 mb-6">Base Hospital (Sabatia)</h2>
+                    <div className="grid md:grid-cols-2 gap-5 md:gap-10 lg:gap-16 items-center ">
 
                         <div>
                             <Image
                                 src="/seh_logo.png"
-                                alt="Kenya Power Workers"
+                                alt="base hospital"
                                 width={600}
                                 height={600}
-                                className="rounded-4xl shadow-md"
+                                className="rounded-3xl shadow-lg hover:scale-105 transition duration-300 w-[100%] sm:w-[95%] md:max-w-lg lg:max-w-full mx-auto"
                             />
                         </div>
-                        <div>
+                        <div
+                            className=" mt-3 sm:mt-6 md:mt-0 text-black text-md sm:text-lg leading-relaxed w-full"
+                        >
                             <p className="text-black mb-4 leading-relaxed">
                                 The Base Hospital is the main facility of <span className="font-semibold">Sabatia Eye Hospital</span>, located in <span className="font-semibold">Vihiga County</span> along <span className="font-semibold">Kisumu-Chavakali-Kapsabet Road</span>, opposite the <span className="font-semibold">Sabatia Deputy County Commissioner’s Office</span>. Since its establishment in <span className="font-semibold">1996</span>, the hospital has been a key referral center for specialized eye care.
                             </p>
@@ -70,7 +72,7 @@ const Branches = () => {
                         // Top-right corner (Fading to South-West)
                         { top: 0, right: 0, count: 16, scaleDir: -1, opacityDir: 1 },
                         // Bottom-left corner (Fading to North-East)
-                        { bottom: 0, left: 0, count: 16, scaleDir: 1, opacityDir: -1 },
+
                         // Bottom-right corner (Fading to North-West)
 
                     ].map((pos, index) => (
@@ -85,7 +87,7 @@ const Branches = () => {
                                     className="flex items-center justify-center"
                                     style={{
                                         transform: `scale(${1 - hexIndex * 0.05 * pos.scaleDir})`,
-                                        opacity: 0.95 - hexIndex * 0.05 * pos.opacityDir,
+                                        opacity: 0.6 - hexIndex * 0.05 * pos.opacityDir,
                                     }}
                                 >
                                     <div
@@ -104,26 +106,25 @@ const Branches = () => {
 
                 {/* Kisumu Clinic */}
 
-                <div className=" h-auto p-6">
+                <div className=" h-auto  p-6">
                     <motion.div
                         initial={{ opacity: 0, scale: 0.95 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: false, amount: 0.2 }}
                         transition={{ duration: 0.5 }}
-                        className="max-w-[85%] m-auto  rounded-lg p-8">
-                        <h2 className="text-3xl font-bold text-blue-900 mb-6">Kisumu Clinic</h2>
-                        <div className="grid md:grid-cols-2 gap-5 items-center text-lg">
+                        className="w-full sm:max-w-[85%] m-auto  rounded-lg sm:p-8">
+                        <h2 className="text-2xl md:text-3xl font-bold text-blue-900 mb-6">Kisumu Clinic</h2>
+                        <div className="grid md:grid-cols-2 gap-5 md:gap-10 lg:gap-16 items-center ">
                             <motion.div
                                 initial={{ opacity: 0, x: -50 }}
                                 whileInView={{ opacity: 1, x: 0 }}
                                 viewport={{ once: false, amount: 0.3 }}
                                 transition={{ duration: 0.6 }}
-
+                                className=" mt-3 sm:mt-6 md:mt-0 text-black text-md sm:text-lg leading-relaxed w-full"
                             >
                                 <p className="text-black mb-4 leading-relaxed">
                                     The Kisumu Clinic is strategically located in the serene <span className="font-semibold">Milimani area, along Lodwar Road</span>, just a <span className="font-semibold">10-minute walk</span> from Kisumu&apos;s Central Business District. Designed to offer accessible and high-quality eye care, the clinic provides a welcoming environment for patients in the region. It is equipped with modern facilities to ensure accurate diagnosis and effective treatment for various eye conditions.
                                 </p>
-
 
                                 <a
                                     href="/allpages/branches/kisumu"
@@ -141,7 +142,7 @@ const Branches = () => {
                             >
                                 <Image
                                     src="/seh_logo.png"
-                                    alt="Kenya Power Workers"
+                                     alt="Seh_pic"
                                     width={600}
                                     height={600}
                                     className="rounded-4xl shadow-md"
@@ -163,9 +164,9 @@ const Branches = () => {
                     viewport={{ once: false, amount: 0.2 }}
                     transition={{ duration: 0.5 }}
 
-                    className="max-w-[85%] m-auto  bg-white rounded-lg p-8">
-                    <h2 className="text-3xl font-bold text-blue-900 mb-6">Eldoret Clinic</h2>
-                    <div className="grid md:grid-cols-2 gap-5 items-center text-lg">
+                    className="w-full sm:max-w-[85%] m-auto  bg-white rounded-lg sm:p-8">
+                    <h2 className="text-2xl mdtext-3xl font-bold text-blue-900 mb-6">Eldoret Clinic</h2>
+                    <div className="grid md:grid-cols-2 gap-5 md:gap-10 lg:gap-16 items-center ">
                         < motion.div
                             initial={{ opacity: 0, scale: 0.8 }}
                             whileInView={{ opacity: 1, scale: 1 }}
@@ -175,17 +176,19 @@ const Branches = () => {
 
                             <Image
                                 src="/seh_logo.png"
-                                alt="Kenya Power Workers"
+                                 alt="Seh_pic"
                                 width={600}
                                 height={600}
-                                className="rounded-4xl shadow-md"
+                                className="rounded-3xl shadow-md"
                             />
                         </motion.div>
                         <motion.div
                             initial={{ opacity: 0, x: -100 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.6, delay: 0.3 }}
-                        >
+                            className=" mt-3 sm:mt-6 md:mt-0 text-black text-md sm:text-lg  leading-relaxed w-full"
+                            >
+                        
 
                             <p className="text-black mb-4 leading-relaxed">
                                 The Eldoret Clinic, located at  <span className="font-semibold"> Sagaas Plaza 4th Floor </span>, was officially opened on 29th July 2021 to enhance eye care services in  <span className="font-semibold"> Uasin Gishu County</span> and its surroundings. Strategically positioned  <span className="font-semibold"> opposite the Regional Blood Transfusion Centre </span>, the clinic offers affordable, high-quality eye care. Our dedicated staff ensure that patients receive expert consultations, diagnostics, and treatment closer to home.
