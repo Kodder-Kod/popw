@@ -212,49 +212,48 @@ const Media = () => {
                     ))}
                 </div>
 
-                <div className="h-auto bg-blue-100 ">
-                    <div className="w-[85%] mx-auto">
-                        <h2 className="text-2xl md:text-3xl  font-bold text-black text-center mb-6 relative z-10">Latest Events & News</h2>
-                        <div className="grid grid-cols-1 md:grid-cols-5 gap-5 mt-10 relative z-10">
-                            {news.map((service, index) => (
-                                <motion.div
-                                    key={index}
-                                    className="bg-white shadow-2xl rounded-2xl"
-                                    initial={{ opacity: 0, x: 100 }}
-                                    whileInView={{ opacity: 1, x: 0 }}
-                                    viewport={{ once: false, amount: 0.2 }}
-                                    transition={{ duration: 0.5, delay: index * 0.2 }}
+              <div className="h-auto bg-blue-100 ">
+                      <div className="w-[85%] mx-auto">
+                        <h2 className="text-2xl md:text-3xl font-bold text-black text-center mb-6 relative z-10">Latest Events & News</h2>
+                        <div className="grid grid-cols-1 lg:grid-cols-5 md:grid-cols-3 gap-5 mt-10 relative z-10">
+                          {news.map((service, index) => (
+                            <motion.div
+                              key={index}
+                              className="bg-white shadow-2xl rounded-2xl"
+                              initial={{ opacity: 0, x: 100 }}
+                              whileInView={{ opacity: 1, x: 0 }}
+                              viewport={{ once: false, amount: 0.2 }}
+                              transition={{ duration: 0.5, delay: index * 0.2 }}
+                            >
+                              <Image
+                                src={service.image}
+                                alt={service.title}
+                                width={180} // You can specify the width here
+                                height={120}
+                                className="w-full h-48 md:56 object-cover rounded-t-2xl mb-4"
+                              />
+            
+                              <div className="p-4 sm:p-6">
+                                <h3 className="text-lg sm:text-xl font-semibold text-[#0b58a5] mb-2">
+                                  {service.title}
+                                </h3>
+                                <p className="text-sm sm:text-md text-black leading-relaxed">
+                                  {service.description}
+                                </p>
+                                <a
+                                  href={service.link}
+                                  className="text-blue-600 font-semibold mt-3 sm:mt-4 inline-block text-sm sm:text-base"
                                 >
-                                    <Image
-                                        src={service.image}
-                                        alt={service.title}
-                                        width={180} // You can specify the width here
-                                        height={120}
-                                        className="w-full h-48 md:56 object-cover rounded-t-2xl mb-4"
-                                    />
-
-                                    <div className="p-4 sm:p-6">
-                                        <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-[#0b58a5] mb-2">
-                                            {service.title}
-                                        </h3>
-                                        <p className="text-sm sm:text-base text-black leading-relaxed">
-                                            {service.description}
-                                        </p>
-                                        <a
-                                            href={service.link}
-                                            className="text-blue-600 font-semibold mt-3 sm:mt-4 inline-block text-sm sm:text-base"
-                                        >
-                                            Learn more →
-                                        </a>
-                                    </div>
-
-                                </motion.div>
-                            ))}
+                                  Learn more →
+                                </a>
+                              </div>
+            
+                            </motion.div>
+                          ))}
                         </div>
+                      </div>
+            
                     </div>
-
-                </div>
-
 
             </div>
             <div className="bg-white min-h-auto p-6">
@@ -287,7 +286,7 @@ const Media = () => {
                         <div
                             className="items-center" >
                             <h2 className="hidden md:block text-xl sm:text:2xl font-bold text-blue-900 mb-4">Annual Report {selectedYear}</h2>
-                            <p className="text-md sm:text-lg text-gray-700 mb-7 sm:my-15 p-1">{reports[selectedYear].text}</p>
+                            <p className="text-md text-gray-700 mb-7 sm:my-15 p-1">{reports[selectedYear].text}</p>
 
                             {/* Download Button */}
                             <div className="flex justify-center md:justify-start">

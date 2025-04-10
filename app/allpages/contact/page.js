@@ -111,8 +111,8 @@ const Contact = () => {
 
                         {/* Wording */}
                         <div className="absolute top-1/4 left-10 text-white max-w-sm">
-                            <h1 className="text-2xl  sm:text-3xl font-bold text-white">Get in Touch</h1>
-                            <p className="text-md sm:text-lg mt-2 text-white">
+                            <h1 className="text-2xl  sm:text-3xl font-bold text-white  leading-relaxed">Get in Touch</h1>
+                            <p className="text-mdmt-2 text-white  leading-relaxed">
                                 We’re here to help! Contact Sabatia Eye Hospital with any questions , Enquiry , Compliments and even Complaints — we’ll get back to you shortly. Our team is always ready to assist you with care and professionalism.
                             </p>
 
@@ -126,18 +126,18 @@ const Contact = () => {
                             lg:absolute lg:top-1/3 lg:left-2/3 
                             lg:-translate-x-1/2 lg:-translate-y-1/4 
                             bg-white shadow-lg rounded-3xl p-12 max-w-3xl w-full 
-                            mx-auto text-md sm:text-lg
+                            mx-auto 
                             ">
-                        <p className="text-gray-600 text-base mb-6">
+                        <p className="text-black text-md mb-6">
                             If you have any queries, feel free to reach out to us.
                         </p>
 
                         {/* Tabs */}
-                        <div className="flex flex-wrap gap-3 mb-6 text-sm sm:text-base md:text-lg">
+                        <div className="flex flex-wrap gap-3 mb-6">
                             {["Enquiry", "Compliments", "Complaints", "Others"].map((tab) => (
                                 <button
                                     key={tab}
-                                    className={`px-4 sm:px-5 py-2 sm:py-3 rounded-lg text-sm sm:text-base md:text-lg transition-colors duration-200 ${formData.enquiryType === tab ? "bg-[#0b58a5] text-white" : "bg-gray-200"
+                                    className={`px-4 sm:px-5 py-2 sm:py-3 rounded-lg text-sm sm:text-lg transition-colors duration-200 ${formData.enquiryType === tab ? "bg-[#0b58a5] text-white" : "bg-gray-200"
                                         }`}
                                     onClick={() => handleTabChange(tab)}
                                 >
@@ -148,7 +148,7 @@ const Contact = () => {
 
 
                         {/* Form */}
-                        <div className="grid grid-cols-1 md:grid-cols-2 sm:gap-6 gap-3 text-md sm:text-lg">
+                        <div className="grid grid-cols-1 md:grid-cols-2 sm:gap-6 gap-3 text-md">
                             {/* Show Enquiry Type Only for "Enquiry" */}
 
                             {/* Name & Email - Common for all */}
@@ -158,7 +158,7 @@ const Contact = () => {
                                 placeholder="Enter Name"
                                 value={formData.name}
                                 onChange={handleChange}
-                                className="border p-4 sm:rounded rounded-xl w-full text-base"
+                                className="border p-4  rounded-xl w-full text-base"
                             />
 
                             <input
@@ -167,11 +167,11 @@ const Contact = () => {
                                 placeholder="Email"
                                 value={formData.email}
                                 onChange={handleChange}
-                                className="border p-4 sm:rounded rounded-xl w-full text-base"
+                                className="border p-4  rounded-xl w-full text-base"
                             />
 
                             {/* Mobile - Common for all */}
-                            <div className="flex items-center border p-3 rounded w-full text-base">
+                            <div className="flex items-center border p-4 rounded-xl w-full text-base">
                                 <span className="mr-3">🇰🇪 +254</span>
                                 <input
                                     type="text"
@@ -179,7 +179,7 @@ const Contact = () => {
                                     placeholder="Enter Mobile No."
                                     value={formData.mobile}
                                     onChange={handleChange}
-                                    className="flex-1 outline-none sm:rounded rounded-xl"
+                                    className="flex-1 outline-none rounded-xl"
                                 />
                             </div>
 
@@ -188,7 +188,7 @@ const Contact = () => {
                                     name="enquiryType"
                                     value={formData.enquiryType}
                                     onChange={handleChange}
-                                    className="border p-3 sm:rounded rounded-xl w-full text-base"
+                                    className="border p-4  rounded-xl w-full text-base"
                                 >
                                     <option value="">Select Enquiry Type</option>
                                     <option value="General">General</option>
@@ -203,7 +203,7 @@ const Contact = () => {
                                     name="hospital"
                                     value={formData.hospital}
                                     onChange={handleChange}
-                                    className="border p-3 sm:rounded rounded-xl w-full text-base"
+                                    className="border p-3  rounded-xl w-full text-base"
                                 >
                                     <option value="">Select Hospital</option>
                                     <option value="Base_hosi">Base Hospital</option>
@@ -220,7 +220,7 @@ const Contact = () => {
                                     placeholder="Area of Concern (Department)"
                                     value={formData.department}
                                     onChange={handleChange}
-                                    className="border p-4 sm:rounded rounded-xl w-full text-base"
+                                    className="border p-4  rounded-xl w-full text-base"
                                 />
                             )}
 
@@ -232,7 +232,7 @@ const Contact = () => {
                                     placeholder="Enter Subject"
                                     value={formData.subject}
                                     onChange={handleChange}
-                                    className="border p-4 sm:rounded rounded-xl w-full text-base"
+                                    className="border p-4  rounded-xl w-full text-base"
                                 />
                             )}
                         </div>

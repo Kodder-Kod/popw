@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: "Sabatia Eye Hospital",
-  description: "Designed by ICT department ",
+  description: "Developed by ICT department ",
 };
 
 export default function RootLayout({ children }) {

@@ -42,11 +42,11 @@ const Appointment = () => {
                         alt="Hospital Logo"
                         width={180}
                         height={120}
-                        className="w-45 h-30"
+                        className="w-50 h-30"
                     />
                 </div>
 
-                <div className="p-6 max-w-full mx-auto bg-white shadow-lg rounded-lg">
+                <div className="p-6 max-w-full mx-auto bg-white shadow-xl rounded-2xl">
                     <div className="flex flex-wrap justify-center gap-4 mb-6">
                         {["Booking", "Reschedule", "Check", "Cancel"].map((tab) => (
                             <button
@@ -111,7 +111,7 @@ const Appointment = () => {
                                 <option value="2:00pm - 4:00pm">2:00pm - 4:00pm</option>
                             </select>
 
-                            <button type="submit" className="w-full bg-[#0b58a5] text-white py-2 rounded-lg font-semibold hover:bg-blue-700">Book Appointment</button>
+                            <button type="submit" className="w-1/3 item-center bg-[#0b58a5] text-white py-2 rounded-lg font-semibold mt-2 hover:bg-blue-100 hover:text-black">Book Appointment</button>
                         </form>
                     )}
 
@@ -131,7 +131,7 @@ const Appointment = () => {
                                 <option value="2:00pm - 4:00pm">2:00pm - 4:00pm</option>
                             </select>
 
-                            <button type="submit" className="w-full bg-[#0b58a5] text-white py-2 rounded-lg font-semibold hover:bg-blue-700">Reschedule</button>
+                            <button type="submit" className="w-1/3 mt-2 bg-[#0b58a5] text-white py-2 rounded-lg font-semibold hover:bg-blue-100 hover:text-black">Reschedule</button>
                         </form>
                     )}
 
@@ -140,7 +140,7 @@ const Appointment = () => {
                             <label className="block font-medium">Reference Number:</label>
                             <input type="text" name="referenceNumber" value={formData.referenceNumber} onChange={handleChange} className="w-full p-2 border border-gray-300 rounded-lg" required />
 
-                            <button type="submit" className="w-full bg-[#0b58a5] text-white py-2 rounded-lg font-semibold hover:bg-blue-700">Check</button>
+                            <button type="submit" className="w-1/3 mt-2 bg-[#0b58a5] text-white py-2 rounded-lg font-semibold hover:bg-blue-100 hover:text-black">Check</button>
                         </form>
                     )}
 
@@ -149,7 +149,7 @@ const Appointment = () => {
                             <label className="block font-medium">Reference Number:</label>
                             <input type="text" name="referenceNumber" value={formData.referenceNumber} onChange={handleChange} className="w-full p-2 border border-gray-300 rounded-lg" required />
 
-                            <button type="submit" className="w-full bg-[#0b58a5] text-white py-2 rounded-lg font-semibold hover:bg-red-700">Cancel</button>
+                            <button type="submit" className="w-1/3 mt-2 bg-[#0b58a5] text-white py-2 rounded-lg font-semibold hover:bg-red-700">Cancel</button>
                         </form>
                     )}
                 </div>

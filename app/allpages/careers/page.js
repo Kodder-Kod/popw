@@ -244,7 +244,7 @@ const Career = () => {
                             />
                         </div>
                         <div
-                            className='mt-3 sm:mt-6 md:mt-0  text-black text-md md:text-lg  leading-relaxed w-full'
+                            className='mt-3 sm:mt-6 md:mt-0  text-black text-md  leading-relaxed w-full'
                         >
                             <p className="text-black mb-4">
                                 Sabatia Eye Hospital is committed to excellence in eye care and is always looking for talented professionals to join our team. We offer a dynamic work environment where passion and expertise come together to transform lives.
@@ -298,7 +298,7 @@ const Career = () => {
                     ))}
                 </div>
 
-                <div className="max-w-6xl mx-auto sm:py-10 p-2">
+                <div className="max-w-6xl mx-auto sm:py-3 p-2">
                     {/* Page Title */}
                     <h2 className="text-xl sm:text-2xl font-bold text-center mb-6">Job Listings</h2>
 
@@ -319,8 +319,8 @@ const Career = () => {
                             <div key={index} className="bg-white shadow-2xl p-6 rounded-2xl flex justify-between items-center">
                                 {/* Job Details */}
                                 <div>
-                                    <h3 className="text-lg sm:text-xl font-semibold">{job.title}</h3>
-                                    <p className="text-gray-500 text-md sm:text-lg">{job.company} - {job.location}</p>
+                                    <h3 className="text-lg sm:text-md font-semibold">{job.title}</h3>
+                                    <p className="text-gray-500 text-sm">{job.company} - {job.location}</p>
                                     <div className="mt-1 sm:mt-2 flex flex-wrap gap-1">
                                         {job.skills.map((skill, i) => (
                                             <span key={i} className="sm:px-3 px-2 py-1 bg-blue-100 text-[#0b58a5] text-sm rounded-full">
@@ -332,12 +332,12 @@ const Career = () => {
 
                                 {/* Job Type & Apply Button */}
                                 <div className="items-center">
-                                    <p className="text-md sm:text-lg text-black font-bold mb-2">{job.type}</p>
+                                    <p className="text-md text-black font-bold mb-2">{job.type}</p>
 
 
                                     <button
                                         onClick={() => handleApplyClick(jobs[index])} // Replace with dynamic job selection
-                                        className="mt-4 px-4 py-2 bg-[#0b58a5] text-white rounded-xl hover:bg-blue-700 text-md sm:text-lg"
+                                        className="mt-4 px-4 py-2 bg-[#0b58a5] text-white rounded-xl hover:bg-blue-100 hover:text-black text-md"
                                     >
                                         Apply
                                     </button>
@@ -354,7 +354,7 @@ const Career = () => {
                             <button
                                 onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
                                 disabled={currentPage === 1}
-                                className={`px-4 py-2 rounded-lg ${currentPage === 1 ? 'bg-gray-300 cursor-not-allowed' : 'bg-blue-600 text-white hover:bg-blue-700'}`}
+                                className={`px-4 py-2 rounded-lg ${currentPage === 1 ? 'bg-gray-300 cursor-not-allowed' : 'bg-blue-600 text-white hover:bg-blue-100 hover:text-black'}`}
                             >
                                 Prev
                             </button>
@@ -366,7 +366,7 @@ const Career = () => {
                             <button
                                 onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
                                 disabled={currentPage === totalPages}
-                                className={`px-4 py-2 rounded-lg ${currentPage === totalPages ? 'bg-gray-300 cursor-not-allowed' : 'bg-[#0b58a5] text-white hover:bg-blue-700'}`}
+                                className={`px-4 py-2 rounded-lg ${currentPage === totalPages ? 'bg-gray-300 cursor-not-allowed' : 'bg-[#0b58a5] text-white hover:bg-blue-100 hover:text-black'}`}
                             >
                                 Next
                             </button>
@@ -390,14 +390,14 @@ const Career = () => {
                                 <p className="mt-2 text-gray-200 text-md">{selectedJob.description}</p>
 
                                 <h3 className="mt-6  text-lg sm:text-xl font-semibold">Responsibilities</h3>
-                                <ul className="mt-2 list-disc list-inside text-gray-200 space-y-1 text-md sm:text-lg">
+                                <ul className="mt-2 list-disc list-inside text-gray-200 space-y-1 text-md">
                                     {selectedJob.responsibilities.map((item, index) => (
                                         <li key={index}>{item}</li>
                                     ))}
                                 </ul>
 
                                 <h3 className="mt-6 text-lg sm:text-xl font-semibold">Qualifications</h3>
-                                <ul className="mt-2 list-disc list-inside text-gray-200 space-y-1 text-md sm:text-lg">
+                                <ul className="mt-2 list-disc list-inside text-gray-200 space-y-1 text-md">
                                     {selectedJob.qualifications.map((item, index) => (
                                         <li key={index}>{item}</li>
                                     ))}
@@ -407,11 +407,11 @@ const Career = () => {
                             {/* Right Side - How to Apply */}
                             <div className="p-8 bg-white flex flex-col justify-center">
                                 <h2 className="sm:text-2xl text-xl font-bold text-gray-800">How to Apply</h2>
-                                <p className="mt-4 text-gray-600 text-md sm:text-lg">Send your cover letter and CV to:</p>
-                                <p className="mt-2 text-blue-600 font-semibold text-md sm:text-lg">jobs@company.com</p>
+                                <p className="mt-4 text-gray-600 text-md">Send your cover letter and CV to:</p>
+                                <p className="mt-2 text-blue-600 font-semibold text-md">jobs@company.com</p>
 
-                                <p className="mt-6 text-gray-600 text-md sm:text-lg">Make sure to include:</p>
-                                <ul className="mt-2 list-disc list-inside text-gray-600 space-y-1 text-md sm:text-lg">
+                                <p className="mt-6 text-gray-600 text-md">Make sure to include:</p>
+                                <ul className="mt-2 list-disc list-inside text-gray-600 space-y-1 text-md">
                                     <li>Your updated CV.</li>
                                     <li>A cover letter explaining why you’re a great fit.</li>
                                     <li>Links to past projects (if available).</li>

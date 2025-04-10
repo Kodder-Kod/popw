@@ -90,7 +90,7 @@ const Eldoret = () => {
                             />
                         </div>
                         <div
-                         className='mt-3 sm:mt-6 md:mt-0  text-black text-md md:text-lg  leading-relaxed w-full'
+                         className='mt-3 sm:mt-6 md:mt-0  text-black text-md  leading-relaxed w-full'
                         >
                             <p className="text-black leading-relaxed mb-4">
                                 Located at <span className="font-semibold">Sagaas Plaza, 4th Floor</span>, opposite the <span className="font-semibold"> Regional Blood Transfusion Centre</span> and next to AIC Fellowship, our Eldoret Clinic is easily accessible for eye care services.

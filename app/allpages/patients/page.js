@@ -114,7 +114,7 @@ const Patients = () => {
                             />
                         </div>
                         <div
-                            className='mt-3 sm:mt-6 md:mt-0  text-black text-md md:text-lg  leading-relaxed w-full'
+                            className='mt-3 sm:mt-6 md:mt-0  text-black text-md  leading-relaxed w-full'
                         >
 
                             <p className="text-black  font-medium mb-4">
@@ -286,13 +286,13 @@ const Patients = () => {
                                 <h3 className=" text-xl sm:text-2xl font-semibold text-[#0b58a5] mb-4">{branch.name}</h3>
                                 <div className="mt-2 space-y-2">
                                     {branch.hours.map((hour, idx) => (
-                                        <p key={idx} className="text-black text-md sm:text-lg">
+                                        <p key={idx} className="text-black text-md">
                                             <strong>{hour.day}:</strong> {hour.time}
                                         </p>
                                     ))}
                                 </div>
 
-                                <div className="mt-6  text-md sm:text-lg">
+                                <div className="mt-6  text-md">
                                     <h4 className="font-semibold text-[#0b58a5]">Contact Us</h4>
                                     {branch.contact.phone && (
                                         <p className="text-black"><strong>Mobile:</strong> {branch.contact.phone.join(" / ")}</p>

@@ -92,7 +92,7 @@ const Tenders = () => {
                             />
                         </div>
                         <div
-                           className='mt-3 sm:mt-6 md:mt-0  text-black text-md md:text-lg  leading-relaxed w-full'
+                           className='mt-3 sm:mt-6 md:mt-0  text-black text-md  leading-relaxed w-full'
                            >
                             <p className="text-black mb-4">
                                 Sabatia Eye Hospital invites eligible suppliers and service providers to participate in our tendering process. We are committed to transparency and fairness in procurement.

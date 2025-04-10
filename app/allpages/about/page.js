@@ -66,7 +66,7 @@ const About = () => {
                         </div>
 
                         <div
-                            className=" mt-3 sm:mt-6 md:mt-0 text-black text-md sm:text-lg leading-relaxed w-full"
+                            className=" mt-3 sm:mt-6 md:mt-0 text-black text-md leading-relaxed w-full"
                         >
                             <p className="text-black mb-4  text-md leading-relaxed">
                                 We are one of the leading not-for-profit and independent referral eye hospitals based in the western part of Kenya. As one of the few tertiary eye hospitals located in rural Kenya, we serve an estimated <span className="font-semibold">15 million people</span>.
@@ -144,9 +144,10 @@ const About = () => {
                                 initial={{ opacity: 0, x: -50 }}
                                 whileInView={{ opacity: 1, x: 0 }}
                                 viewport={{ once: false, amount: 0.3 }}
-                                transition={{ duration: 0.4 }} className='z-20'
+                                transition={{ duration: 0.4 }}
+                                className=" z-20 mt-3 sm:mt-6 md:mt-0 text-black text-md leading-relaxed w-full"
                             >
-                                <p className="text-black mb-4 leading-relaxed z-20 text-md md:text-lg">
+                                <p className="text-black mb-4 leading-relaxed z-20 text-md">
                                     <span className="font-semibold">Sabatia Eye Hospital</span>, located in
                                     <span className="font-semibold"> Vihiga County</span>, was founded in
                                     <span className="font-semibold"> 1996</span> through the efforts of the local
@@ -160,7 +161,7 @@ const About = () => {
                                     <span className="font-semibold">Government of Kenya</span>, and the{" "}
                                     <span className="font-semibold">Friends Church at Vokoli</span>.
                                 </p>
-                                <p className="text-black leading-relaxed text-md md:text-lg">
+                                <p className="text-black leading-relaxed text-md">
                                     The hospital was established in response to the{" "}
                                     <span className="font-semibold">total lack of basic eye care services</span> in
                                     western Kenya, aiming to bridge the gap and provide essential medical
@@ -224,7 +225,7 @@ const About = () => {
                     viewport={{ once: false, amount: 0.2 }}
                     transition={{ duration: 0.5 }}
                     className="py-10 px-6 sm:w-[85%] w-full mx-auto h-auto">
-                    <h2 className="text-2xl md:text-3xl  font-bold text-blue-900 mb-6">What We Believe In</h2>
+                    <h2 className="text-2xl md:text-3xl text-center font-bold text-blue-900 mb-6">What We Believe In</h2>
                     <div className=" grid grid-cols-1 md:grid-cols-2 gap-5 ">
                         {mission.map((service, index) => (
                             <div key={index} className="rounded-2xl p-6">
@@ -246,7 +247,7 @@ const About = () => {
                                     transition={{ duration: 0.6, delay: 0.3 }}
                                     className="border-t border-gray-400  sm:p-6">
                                     <h3 className=" text-xl sm:text-2xl font-semibold text-blue-900 mb-2 leading-relaxed">{service.title}</h3>
-                                    <p className="text-black leading-relaxed text:md sm:text-lg">{service.description}</p>
+                                    <p className="text-black leading-relaxed text:md sm:text-md">{service.description}</p>
                                 </motion.div>
                             </div>
                         ))}
@@ -276,7 +277,7 @@ const About = () => {
                         >
                             <Image
                                 src="/seh_logo.png"
-                                 alt="Seh_pic"
+                                alt="Seh_pic"
                                 width={600}
                                 height={600}
                                 className="rounded-3xl shadow-lg hover:scale-105 transition duration-300 w-[100%] sm:w-[95%] md:max-w-lg lg:max-w-full mx-auto"
@@ -289,7 +290,7 @@ const About = () => {
                             whileInView={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.9, delay: 0.5 }}
                             viewport={{ once: false, amount: 0.2 }}
-                            className='mt-3 sm:mt-6 md:mt-0  text-black text-md md:text-lg  leading-relaxed w-full'
+                            className='mt-3 sm:mt-6 md:mt-0  text-black text-md  leading-relaxed w-full'
                         >
                             <p className="text-black mb-4 text-md leading-relaxed">
                                 We are governed by an Oversight Board of Directors, comprising 12 members drawn from various major stakeholders and partners, including the local community, Friends Church – Vokoli Yearly Meeting, Lions Clubs, and representatives of the national and county governments.

@@ -89,7 +89,7 @@ const Kisumu = () => {
                             />
                         </div>
                         <div 
-                          className='mt-3 sm:mt-6 md:mt-0  text-black text-md md:text-lg  leading-relaxed w-full'
+                          className='mt-3 sm:mt-6 md:mt-0  text-black text-md  leading-relaxed w-full'
                         >
                             <p className="text-black leading-relaxed mb-4">
                                 Located in the quiet <span className="font-semibold">Milimani area</span> along Lodwar Road, our Kisumu Clinic is just a short <span className="font-semibold">10-minute walk</span> from the Central Business District, ensuring accessibility for all.

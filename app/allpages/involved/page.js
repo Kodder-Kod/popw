@@ -48,7 +48,7 @@ const Involved = () => {
                         </div>
 
                         <div
-                            className='mt-3 sm:mt-6 md:mt-0 text-black text-md md:text-lg leading-relaxed w-full'>
+                            className='mt-3 sm:mt-6 md:mt-0 text-black text-md leading-relaxed w-full'>
                             <p className=" text-black leading-relaxed mb-6">
                                 <strong>Sabatia Eye Hospital</strong> invites you to join in our quest to contribute to the reduction of avoidable blindness in the country and the East African region.
                             </p>
@@ -146,10 +146,10 @@ const Involved = () => {
                                 transition={{ duration: 0.6, delay: 0.3 }}
                                 className="bg-white shadow-md rounded-2xl  p-6">
                                 <h3 className="text-xl sm:text-2xl font-semibold text-blue-900 mb-2">Donate</h3>
-                                <p className="text-black leading-relaxed text-md md:text-lg">
+                                <p className="text-black leading-relaxed text-md">
                                     Make a Difference: The most direct and immediate way to help is by donating money or providing material support. You can contribute to Sabatia Eye Hospital through any of the following methods:
                                 </p>
-                                <ul className="list-inside list-disc text-md sm:text-lg pl-5 mt-3 ">
+                                <ul className="list-inside list-disc text-md pl-5 mt-3 ">
                                     <li><span className="font-medium text-blue-600">Mobile Money Transfer</span></li>
                                     <li><span className="font-medium text-blue-600">Credit Card</span></li>
                                     <li><span className="font-medium text-blue-600">Contacting our offices directly</span></li>
@@ -186,10 +186,10 @@ const Involved = () => {
                                 transition={{ duration: 0.6, delay: 0.3 }}
                                 className="bg-white shadow-md rounded-2xl p-6">
                                 <h3 className="text-xl sm:text-2xl font-semibold text-blue-900 mb-2">Volunteer</h3>
-                                <p className="text-black leading-relaxed text-md md:text-lg">
+                                <p className="text-black leading-relaxed text-md">
                                     Join Us in Making a Difference: Sabatia Eye Hospital welcomes skilled and passionate individuals to volunteer their expertise in the eradication of avoidable blindness. If you would like to volunteer with us, please send your application along with your current resume to:
                                 </p>
-                                <div className="mt-3 text-black text-md sm:text-lg text-center">
+                                <div className="mt-3 text-black text-md text-center">
                                     <p>
                                         <a
                                             href="mailto:recruitment@sabatiaeyehospital.org"
@@ -225,7 +225,7 @@ const Involved = () => {
                 <div className='grid md:grid-cols-2 gap-5 md:gap-10 lg:gap-16 items-center'>
                     <div >
                         <h2 className="text-xl sm:text-2xl sm:text-3xl font-bold text-blue-900  text-center mb-4">Prospectus </h2>
-                        <p className="text-md sm:text-lg text-gray-700  sm:p-4   text-justify leading-relaxed">
+                        <p className="text-md text-gray-700  sm:p-4   text-justify leading-relaxed">
                             Join us in our mission to combat avoidable blindness and transform lives. Your support can make a profound difference in providing accessible eye care to those in need. Whether through a donation, spreading awareness, or participating in fundraising activities, your involvement empowers us to reach more individuals and families. Together, let’s create a future where everyone has the gift of sight. Take action today and be a beacon of hope for countless individuals affected by vision loss. Together, we can make a lasting impact and bring light into the lives of those in need.
 
                             <br /><br />

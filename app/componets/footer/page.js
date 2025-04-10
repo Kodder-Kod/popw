@@ -43,26 +43,26 @@ const Footer = () => {
         "About Us",
         "Our Services",
         "Hospitals",
-        "Resources",
+        "Media",
         "For Patients",
         "Education & Training",
         "Get Involved",
-        "Contact Us",
         "Careers",
         "Tenders",
+         "Contact Us"
       ],
       links: [
         "/",
         "/allpages/about",
         "/allpages/services",
         "/allpages/hospitals",
-        "/allpages/resources",
+        "/allpages/media",
         "/allpages/patients",
         "/allpages/education",
         "/allpages/involved",
-        "/allpages/contact",
         "/allpages/careers",
-        "allpages/tenders"
+        "allpages/tenders",
+        "/allpages/contact"
       ],
     },
     {

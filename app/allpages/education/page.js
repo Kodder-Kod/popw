@@ -42,7 +42,7 @@ const Education = () => {
                             />
                         </div>
                         <div
-                            className='mt-3 sm:mt-6 md:mt-0  text-black text-md md:text-lg  leading-relaxed w-full'
+                            className='mt-3 sm:mt-6 md:mt-0  text-black text-md  leading-relaxed w-full'
                         >
                             <p className="text-black mb-4 leading-relaxed ">
                                 Sabatia Eye Hospital has embraced training of Human Resource for Eye Health as one of its Strategic Directions. The hospital has entered into a partnership with <span className="font-semibold">Jomo Kenyatta University of Science and Technology</span> to provide a <span className="font-semibold">Bachelor of Science degree in Clinical Medicine (Comprehensive Ophthalmology and Cataract Surgery)</span>.
@@ -67,8 +67,8 @@ const Education = () => {
                     <div>
                         <p className="text-white sm:text-2xl text-xl font-bold mb-4">Qualification</p>
                         <ul className="list-disc pl-5 space-y-2 ">
-                            <li className="text-gray-100 sm:text-lg text-md ">Diploma in Clinical Medicine / HND in Clinical Medicine (Cataract Surgery).</li>
-                            <li className="text-gray-100 sm:text-lg text-md">Must be a registered member of the Clinical Officers Council of Kenya (COC).</li>
+                            <li className="text-gray-100 sm:text-md text-md ">Diploma in Clinical Medicine / HND in Clinical Medicine (Cataract Surgery).</li>
+                            <li className="text-gray-100 sm:text-md text-md">Must be a registered member of the Clinical Officers Council of Kenya (COC).</li>
                         </ul>
                     </div>
                 </motion.div>
@@ -132,7 +132,7 @@ const Education = () => {
                                 whileInView={{ opacity: 1, x: 0 }}
                                 viewport={{ once: false, amount: 0.3 }}
                                 transition={{ duration: 0.6 }}
-                                className='mt-3 sm:mt-6 md:mt-0  text-black text-md md:text-lg  leading-relaxed w-full'
+                                className='mt-3 sm:mt-6 md:mt-0  text-black text-md  leading-relaxed w-full'
                             >
                                 <p className="text-black mb-4 leading-relaxed ">
                                     An <span className="font-semibold">ophthalmic skill upgrading training</span> is one strategy the hospital utilizes to reduce the shortage of eye care workers in the country. The uptake of the training has been impressive over the years, as it has not only helped to reduce the gap in human resources but also improved the <span className="font-semibold">quality and accessibility</span> of eye care services in Kenya and other Eastern African countries through prompt and appropriate referrals.
@@ -281,7 +281,7 @@ const Education = () => {
                                     alt="Doctor smiling"
                                     width={400}
                                     height={400}
-                                    className="rounded-lg shadow-lg w-[70%] mr-30 mb-20 "
+                                    className="rounded-lg shadow-lg w-[70%] ml-30 mb-20 "
                                 />
                             </div>
 
@@ -307,7 +307,7 @@ const Education = () => {
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: false, amount: 0.3 }}
                             transition={{ duration: 0.6 }}
-                            className='mt-3 sm:mt-6 md:mt-0  text-black text-md md:text-lg  leading-relaxed w-full'
+                            className='mt-3 sm:mt-6 md:mt-0  text-black text-md  leading-relaxed w-full'
                             >
                             <p className="text-black mb-4">
                                 Sabatia Eye hospital also works with other training institutions in the Country to provide practical trainings for both Middle and high cadre eye care trainings

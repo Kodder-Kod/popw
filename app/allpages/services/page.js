@@ -144,7 +144,7 @@ const Services = () => {
 
                                 <div className="pb-6 px-6">
                                     <h3 className="sm:text-xl text-lg font-semibold text-blue-900 mb-2 ">{service.title}</h3>
-                                    <p className="text-black text-md sm:text-lg leading-relaxed">{service.description}</p>
+                                    <p className="text-black text-md leading-relaxed">{service.description}</p>
                                 </div>
 
                             </motion.div>
@@ -157,21 +157,38 @@ const Services = () => {
             {/* Outreach Program */}
 
             <div className="bg-white h-auto p-6">
-                <div className="w-full sm:max-w-[85%] m-auto  bg-white rounded-lg sm:p-8">
+                <motion.div
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: false, amount: 0.1 }}
+                    transition={{ duration: 0.3, delay: 0.5 }}
+
+                    className="w-full sm:max-w-[85%] m-auto  bg-white rounded-lg sm:p-8">
                     <h2 className=" text-2xl sm:text-3xl font-bold text-blue-900 mb-6">Outreach Program</h2>
                     <div className="grid md:grid-cols-2 gap-5 items-center text-lg">
 
-                        <div>
+                        <motion.div
+
+                            initial={{ opacity: 0, scale: 0.9 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            viewport={{ once: false, amount: 0.2 }}
+                            transition={{ duration: 0.3, delay: 0.3 }}
+
+                        >
                             <Image
                                 src="/seh_logo.png"
-                                 alt="Seh_pic"
+                                alt="Seh_pic"
                                 width={600}
                                 height={600}
-                                className="rounded-4xl shadow-lg hover:scale-105 transition duration-300 w-[100%] sm:w-[95%] md:max-w-lg lg:max-w-full mx-auto"
+                                className="rounded-3xl shadow-lg hover:scale-105 transition duration-300 w-[100%] sm:w-[95%] md:max-w-lg lg:max-w-full mx-auto"
                             />
-                        </div>
-                        <div
-                            className=" mt-3 sm:mt-6 md:mt-0  text-black  text-md sm:text-lg  leading-relaxed w-full"
+                        </motion.div>
+                        <motion.div
+                            initial={{ opacity: 0, x: 100 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.9, delay: 0.5 }}
+                            viewport={{ once: false, amount: 0.2 }}
+                            className='mt-3 sm:mt-6 md:mt-0  text-black text-md  leading-relaxed w-full'
                         >
                             <p className="text-black mb-4 leading-relaxed">
                                 <span className="font-semibold">Sabatia Eye Hospital</span>, through the support of its partners, has successfully extended its services to patients in marginalized areas via an <span className="font-semibold">elaborate outreach program</span>.
@@ -180,9 +197,9 @@ const Services = () => {
                                 This initiative specifically targets communities in the former <span className="font-semibold">Nyanza, Western, and Rift Valley provinces</span>, where eye care services are limited or entirely unavailable. On average, the hospital organizes <span className="font-semibold">20 outreach programs</span> annually to bridge this gap.
                             </p>
 
-                        </div>
+                        </motion.div>
                     </div>
-                </div>
+                </motion.div>
             </div>
 
         </div>

@@ -41,7 +41,7 @@ const Navbar = () => {
       {/**  desktop view navbar */}
       <div className="flex items-center justify-center">
         <div
-          className={`bg-[#0b58a5]  py-2 px-4 hidden lg:flex justify-around items-center text-white text-md transition-all duration-300 z-50 
+          className={`bg-[#0b58a5]  py-2 px-4 hidden lg:flex justify-around items-center text-white text-sm transition-all duration-300 z-50 
           ${isScrolled ? "w-full fixed top-0 rounded-none z-50 left-0" : "top-10 fixed w-8/10 rounded-t-xl"}`}
         >
           <a href="/allpages/patients">For Patients</a>
@@ -57,11 +57,11 @@ const Navbar = () => {
 
       <div className="flex items-center justify-center">
         <div
-          className={`bg-white px-4 hidden  lg:flex justify-between items-center text-md transition-all duration-300 z-50 
+          className={`bg-white px-4 hidden  lg:flex justify-between items-center text-sm transition-all duration-300 z-50 
           ${isScrolled ? "w-full fixed top-10 rounded-none shadow-xl z-50 left-0" : "top-20 fixed w-8/10 rounded-b-xl shadow-xl"}`}
         >
           <a href="/allpages/home">
-            <img src="/seh_logo.png" alt="logo" style={{ width: "130px", height: "70px" }} />
+            <img src="/seh_logo.png" alt="logo" style={{ width: "120px", height: "65px" }} />
           </a>
           <a href="/allpages/home" >Home</a>
 
@@ -128,9 +128,9 @@ const Navbar = () => {
       </div>
 
       {/**  Mobile and tablet view navbar */}
-      <div className="bg-[#0b58a5] text-white fixed top-0 z-50 shadow-lg w-screen text-sm  block lg:hidden">
+      <div className=" text-white fixed top-0 z-50 shadow-lg w-screen text-sm  block lg:hidden">
 
-        <div className="flex justify-around items-center py-1 border-b border-gray-200">
+        <div className=" bg-[#0b58a5] flex justify-around items-center py-1 border-b border-gray-200 bg-[#0b58a5]">
           <a href="/allpages/patients" className="text-white hover:text-gray-300">For Patients</a>
           <span className="bg-blue-100 text-black px-3 py-1 rounded-full text-sm">USSD *334*200211* </span>
         </div>
@@ -148,7 +148,8 @@ const Navbar = () => {
         </div>
 
         {menuOpen && (
-          <div className="bg-gray-50 p-4 shadow-xl text-black rounded-b-lg  block lg:hidden">
+
+          <div className="bg-gray-50 p-4 shadow-xl text-black rounded-b-lg w-1/2 block lg:hidden">
 
             <a href="/allpages/home" className="flex items-center gap-2 py-2 hover:bg-gray-300 rounded">
               <FaHome /> Home
@@ -159,7 +160,7 @@ const Navbar = () => {
               </a>
 
               <div onClick={() => setAboutOpen(!aboutOpen)}>
-                <FaChevronDown className="mr-10 w-4 h-4" />
+                <FaChevronDown className="mr-20 w-4 h-4" />
               </div>
 
             </div>
@@ -171,14 +172,14 @@ const Navbar = () => {
               </div>
             )}
             <a href="/allpages/services" className="flex items-center gap-2 py-2 hover:bg-gray-300 rounded">
-              < FaFirstAid/> Services
+              < FaFirstAid /> Services
             </a>
             <div className="flex items-center justify-between py-2 hover:bg-gray-300 rounded cursor-pointer" >
               <a href="/allpages/branches" className="flex items-center gap-2 py-2 hover:bg-gray-300 rounded">
                 <FaMapMarkedAlt /> Branches
               </a>
               <div onClick={() => setBranchesOpen(!branchesOpen)}>
-                <FaChevronDown className="mr-10 w-4 h-4" />
+                <FaChevronDown className="mr-20 w-4 h-4" />
               </div>
 
             </div>
@@ -213,6 +214,8 @@ const Navbar = () => {
               <FaEnvelope /> Contact Us
             </a>
           </div>
+
+
         )}
 
 

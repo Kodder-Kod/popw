@@ -143,15 +143,15 @@ const Homepage = () => {
               <div className="relative h-full flex items-center justify-start px-4 sm:px-10 md:px-20 lg:px-40">
 
                 <div className="z-10 text-left text-white px-4 mt-40  bg-black/40 backdrop-blur-lg rounded-xl h-[28vh]  ">
-                  <h1 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-shadow-lg mt-2">
+                  <h1 className="text-2xl sm:text-3xl font-extrabold text-shadow-lg mt-2 leading-relaxed">
                     {slide.title}
                   </h1>
-                  <p className="mt-4 max-w-xl text-sm sm:text-base md:text-lg lg:text-xl text-shadow">
+                  <p className="mt-4 max-w-xl text-md text-shadow leading-relaxed">
                     {slide.text}
                   </p>
 
-                  <button className="mt-6 bg-[#0b58a5] py text-white px-6 py-3 rounded-lg text-lg font-medium hover:bg-blue-700 transition duration-300 shadow-md">
-                    Learn More
+                  <button   className="mt-6 bg-[#0b58a5] text-white px-5 py-2 rounded-xl text-md font-medium hover:bg-blue-100 hover:text-black transition duration-300 shadow-md">
+                   <a href="/allpages/about"> Learn More</a> 
                   </button>
                 </div>
               </div>
@@ -197,7 +197,7 @@ const Homepage = () => {
               </h3>
 
               {/* Description hidden on mobile */}
-              <p className="hidden sm:inline-block text-white p-2 rounded-lg text-base sm:text-lg">
+              <p className="hidden sm:inline-block text-white p-2 rounded-lg text-base sm:text-md">
                 {service.description}
               </p>
 
@@ -223,12 +223,12 @@ const Homepage = () => {
 
 
         >
-          <h2 className="text-2xl md:text-3xl  font-bold text-[#0b58a5] mb-6">
+          <h2 className="text-2xl md:text-3xl  text-center font-bold text-[#0b58a5] mb-6">
             Who We Are
           </h2>
 
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10 lg:gap-16  items-center text-base sm:text-lg px-4 sm:px-6 lg:px-12 py-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10 lg:gap-16  items-center px-4 sm:px-6 lg:px-12 py-6">
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
@@ -252,13 +252,13 @@ const Homepage = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.9, delay: 0.2 }}
               viewport={{ once: false, amount: 0.2 }}
-              className=" mt-3 sm:mt-6 md:mt-0 text-black text-md sm:text-lg  leading-relaxed w-full"
+              className=" mt-3 sm:mt-6 md:mt-0 text-black text-md leading-relaxed w-full"
             >
               <p className="text-black mb-4 leading-relaxed">
                 <span className="font-semibold">Sabatia Eye Hospital</span> is a leading <span className="font-semibold">not-for-profit</span> and independent referral eye hospital based in the western part of Kenya. As one of the few tertiary eye hospitals located in rural Kenya, it serves an estimated <span className="font-semibold">15 million people</span>.
               </p>
               <p className="text-black mb-4 leading-relaxed">
-                These regions include the North Rift, western Kenya, and the Lake Basin, covering <span className="font-semibold">17 counties</span>. The hospital extends its services through <span className="font-semibold">outreach campaigns</span>, made possible by strategic partnerships and collaborative initiatives.
+                These regions inclxude the North Rift, western Kenya, and the Lake Basin, covering <span className="font-semibold">17 counties</span>. The hospital extends its services through <span className="font-semibold">outreach campaigns</span>, made possible by strategic partnerships and collaborative initiatives.
               </p>
               <p className="text-black leading-relaxed">
                 In addition to healthcare services, Sabatia Eye Hospital offers <span className="font-semibold">competency-based training</span> in various ophthalmological courses. To efficiently fulfill its mission, the hospital is structured into three key departments: <span className="font-semibold">Clinical, Finance & Administration, and Training</span>.
@@ -315,8 +315,8 @@ const Homepage = () => {
 
         <div className="h-auto bg-blue-100 ">
           <div className="w-[85%] mx-auto">
-            <h2 className="text-2xl md:text-3xl  font-bold text-black text-center mb-6 relative z-10">Latest Events & News</h2>
-            <div className="grid grid-cols-1 md:grid-cols-5 gap-5 mt-10 relative z-10">
+            <h2 className="text-2xl md:text-3xl font-bold text-black text-center mb-6 relative z-10">Latest Events & News</h2>
+            <div className="grid grid-cols-1 lg:grid-cols-5 md:grid-cols-3 gap-5 mt-10 relative z-10">
               {news.map((service, index) => (
                 <motion.div
                   key={index}
@@ -335,10 +335,10 @@ const Homepage = () => {
                   />
 
                   <div className="p-4 sm:p-6">
-                    <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-[#0b58a5] mb-2">
+                    <h3 className="text-lg sm:text-xl font-semibold text-[#0b58a5] mb-2">
                       {service.title}
                     </h3>
-                    <p className="text-sm sm:text-base text-black leading-relaxed">
+                    <p className="text-sm sm:text-md text-black leading-relaxed">
                       {service.description}
                     </p>
                     <a

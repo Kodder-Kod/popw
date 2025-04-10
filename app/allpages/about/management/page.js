@@ -68,7 +68,7 @@ const Manage = () => {
                             <div className="absolute inset-0  bg-opacity-50"></div>
                             <div className="absolute bottom-0 left-0 w-full text-white p-4 bg-gradient-to-t from-black to-transparent">
                                 <h3 className="text-lg md:text-xl font-bold">{person.name}</h3>
-                                <p className="text-md md:text-lg font-medium">{person.position}</p>
+                                <p className="text-md font-medium">{person.position}</p>
                             </div>
                         </motion.div>
                     ))}

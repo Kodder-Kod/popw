@@ -44,7 +44,7 @@ const Branches = () => {
                             />
                         </div>
                         <div
-                            className=" mt-3 sm:mt-6 md:mt-0 text-black text-md sm:text-lg leading-relaxed w-full"
+                            className=" mt-3 sm:mt-6 md:mt-0 text-black text-md leading-relaxed w-full"
                         >
                             <p className="text-black mb-4 leading-relaxed">
                                 The Base Hospital is the main facility of <span className="font-semibold">Sabatia Eye Hospital</span>, located in <span className="font-semibold">Vihiga County</span> along <span className="font-semibold">Kisumu-Chavakali-Kapsabet Road</span>, opposite the <span className="font-semibold">Sabatia Deputy County Commissioner’s Office</span>. Since its establishment in <span className="font-semibold">1996</span>, the hospital has been a key referral center for specialized eye care.
@@ -120,7 +120,7 @@ const Branches = () => {
                                 whileInView={{ opacity: 1, x: 0 }}
                                 viewport={{ once: false, amount: 0.3 }}
                                 transition={{ duration: 0.6 }}
-                                className=" mt-3 sm:mt-6 md:mt-0 text-black text-md sm:text-lg leading-relaxed w-full"
+                                className=" mt-3 sm:mt-6 md:mt-0 text-black text-md leading-relaxed w-full"
                             >
                                 <p className="text-black mb-4 leading-relaxed">
                                     The Kisumu Clinic is strategically located in the serene <span className="font-semibold">Milimani area, along Lodwar Road</span>, just a <span className="font-semibold">10-minute walk</span> from Kisumu&apos;s Central Business District. Designed to offer accessible and high-quality eye care, the clinic provides a welcoming environment for patients in the region. It is equipped with modern facilities to ensure accurate diagnosis and effective treatment for various eye conditions.
@@ -186,7 +186,7 @@ const Branches = () => {
                             initial={{ opacity: 0, x: -100 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.6, delay: 0.3 }}
-                            className=" mt-3 sm:mt-6 md:mt-0 text-black text-md sm:text-lg  leading-relaxed w-full"
+                            className=" mt-3 sm:mt-6 md:mt-0 text-black text-md  leading-relaxed w-full"
                             >
                         
 

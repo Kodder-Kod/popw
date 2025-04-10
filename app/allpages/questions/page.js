@@ -131,7 +131,7 @@ const Questions = () => {
                 <p className="text-[#0b58a5]  mb-2 sm:text-xl text:lg ">
                   <strong>{index + 1}. {step.question}</strong>
                 </p>
-                <p className="text-black mb-4 sm:text-lg text:md ">{step.answer}</p>
+                <p className="text-black mb-4 sm:text-md text:md ">{step.answer}</p>
               </div>
             ))}
           </div>
@@ -142,7 +142,7 @@ const Questions = () => {
                 <p className="text-[#0b58a5]  mb-2 sm:text-xl text:lg ">
                   <strong>{index + 8}. {step.question}</strong>
                 </p>
-                <p className="text-black mb-4 sm:text-lg text:md">{step.answer}</p>
+                <p className="text-black mb-4 sm:text-md text:md">{step.answer}</p>
               </div>
             ))}
           </div>
