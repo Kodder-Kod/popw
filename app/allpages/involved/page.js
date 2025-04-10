@@ -223,7 +223,13 @@ const Involved = () => {
                 {/* Report Details */}
 
                 <div className='grid md:grid-cols-2 gap-5 md:gap-10 lg:gap-16 items-center'>
-                    <div >
+                      <motion.div
+                                              initial={{ opacity: 0, x: -50 }}
+                                              whileInView={{ opacity: 1, x: 0 }}
+                                              transition={{ duration: 0.7 }}
+                                              viewport={{ once: false, amount: 0.2 }}
+                                              className="items-center"
+                                          >
                         <h2 className="text-xl sm:text-2xl sm:text-3xl font-bold text-blue-900  text-center mb-4">Prospectus </h2>
                         <p className="text-md text-black sm:p-4   text-justify leading-relaxed">
                             Join us in our mission to combat avoidable blindness and transform lives. Your support can make a profound difference in providing accessible eye care to those in need. Whether through a donation, spreading awareness, or participating in fundraising activities, your involvement empowers us to reach more individuals and families. Together, let’s create a future where everyone has the gift of sight. Take action today and be a beacon of hope for countless individuals affected by vision loss. Together, we can make a lasting impact and bring light into the lives of those in need.
@@ -247,10 +253,16 @@ const Involved = () => {
                                 Download Prospectus
                             </a>
                         </div>
-                    </div>
+                    </motion.div>
 
                     {/* Report Image */}
-                    <div >
+
+                    <motion.div
+                        initial={{ opacity: 0, x: 50 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.7 }}
+                        viewport={{ once: false, amount: 0.2 }}
+                    >
                         <Image
                             src="/seh_logo.png"
                             alt='prospectus'
@@ -258,10 +270,9 @@ const Involved = () => {
                             height={500}
                             className="rounded-4xl shadow-lg hover:scale-105 transition duration-300"
                         />
-                    </div>
+                    </motion.div>
 
                 </div>
-
 
             </div>
 

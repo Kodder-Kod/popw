@@ -4,6 +4,7 @@
 import Navbar from '@/app/componets/navbar/page';
 import Image from 'next/image';
 import { useState } from 'react';
+import { motion } from "framer-motion";
 
 
 const jobs = [
@@ -316,33 +317,45 @@ const Career = () => {
                     {/* Job Listings */}
                     <div className="space-y-3">
                         {currentJobs.length > 0 ? currentJobs.map((job, index) => (
-                            <div key={index} className="bg-white shadow-2xl p-6 rounded-2xl flex justify-between items-center">
-                                {/* Job Details */}
-                                <div>
-                                    <h3 className="text-lg sm:text-md font-semibold">{job.title}</h3>
-                                    <p className="text-gray-500 text-sm">{job.company} - {job.location}</p>
-                                    <div className="mt-1 sm:mt-2 flex flex-wrap gap-1">
-                                        {job.skills.map((skill, i) => (
-                                            <span key={i} className="sm:px-3 px-2 py-1 bg-blue-100 text-[#0b58a5] text-sm rounded-full">
-                                                {skill}
-                                            </span>
-                                        ))}
-                                    </div>
-                                </div>
+                   
 
-                                {/* Job Type & Apply Button */}
-                                <div className="items-center">
-                                    <p className="text-md text-black font-bold mb-2">{job.type}</p>
-
-
-                                    <button
-                                        onClick={() => handleApplyClick(jobs[index])} // Replace with dynamic job selection
-                                        className="mt-4 px-4 py-2 bg-[#0b58a5] text-white rounded-xl hover:bg-blue-100 hover:text-black text-md"
-                                    >
-                                        Apply
-                                    </button>
-                                </div>
-                            </div>
+                         <motion.div
+                           key={index}
+                           initial={{ opacity: 0, scale :0.3 }}
+                           whileInView={{ opacity: 1, scale:1 }}
+                           viewport={{ once: false, amount: 0.2 }}
+                           transition={{ duration: 0.7, delay: index * 0.1 }}
+                           className="bg-white shadow-2xl p-6 rounded-2xl flex justify-between items-center"
+                         >
+                           {/* Job Details */}
+                           <div>
+                             <h3 className="text-lg sm:text-md font-semibold">{job.title}</h3>
+                             <p className="text-gray-500 text-sm">{job.company} - {job.location}</p>
+                             <div className="mt-1 sm:mt-2 flex flex-wrap gap-1">
+                               {job.skills.map((skill, i) => (
+                                 <span
+                                   key={i}
+                                   className="sm:px-3 px-2 py-1 bg-blue-100 text-[#0b58a5] text-sm rounded-full"
+                                 >
+                                   {skill}
+                                 </span>
+                               ))}
+                             </div>
+                           </div>
+                         
+                           {/* Job Type & Apply Button */}
+                           <div className="items-center">
+                             <p className="text-md text-black font-bold mb-2">{job.type}</p>
+                         
+                             <button
+                               onClick={() => handleApplyClick(jobs[index])}
+                               className="mt-4 px-4 py-2 bg-[#0b58a5] text-white rounded-xl hover:bg-blue-100 hover:text-black text-md"
+                             >
+                               Apply
+                             </button>
+                           </div>
+                         </motion.div>
+                         
                         )) : (
                             <p className="text-center text-gray-500">No jobs found.</p>
                         )}

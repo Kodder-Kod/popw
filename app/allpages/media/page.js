@@ -212,80 +212,105 @@ const Media = () => {
                     ))}
                 </div>
 
-              <div className="h-auto bg-blue-100 ">
-                      <div className="w-[85%] mx-auto">
+                <div className="h-auto bg-blue-100 ">
+                    <div className="w-[85%] mx-auto">
                         <h2 className="text-2xl md:text-3xl font-bold text-black text-center mb-6 relative z-10">Latest Events & News</h2>
                         <div className="grid grid-cols-1 lg:grid-cols-5 md:grid-cols-3 gap-5 mt-10 relative z-10">
-                          {news.map((service, index) => (
-                            <motion.div
-                              key={index}
-                              className="bg-white shadow-2xl rounded-2xl"
-                              initial={{ opacity: 0, x: 100 }}
-                              whileInView={{ opacity: 1, x: 0 }}
-                              viewport={{ once: false, amount: 0.2 }}
-                              transition={{ duration: 0.5, delay: index * 0.2 }}
-                            >
-                              <Image
-                                src={service.image}
-                                alt={service.title}
-                                width={180} // You can specify the width here
-                                height={120}
-                                className="w-full h-48 md:56 object-cover rounded-t-2xl mb-4"
-                              />
-            
-                              <div className="p-4 sm:p-6">
-                                <h3 className="text-lg sm:text-xl font-semibold text-[#0b58a5] mb-2">
-                                  {service.title}
-                                </h3>
-                                <p className="text-sm sm:text-md text-black leading-relaxed">
-                                  {service.description}
-                                </p>
-                                <a
-                                  href={service.link}
-                                  className="text-blue-600 font-semibold mt-3 sm:mt-4 inline-block text-sm sm:text-base"
+                            {news.map((service, index) => (
+                                <motion.div
+                                    key={index}
+                                    className="bg-white shadow-2xl rounded-2xl"
+                                    initial={{ opacity: 0, x: 100 }}
+                                    whileInView={{ opacity: 1, x: 0 }}
+                                    viewport={{ once: false, amount: 0.2 }}
+                                    transition={{ duration: 0.5, delay: index * 0.2 }}
                                 >
-                                  Learn more →
-                                </a>
-                              </div>
-            
-                            </motion.div>
-                          ))}
+                                    <Image
+                                        src={service.image}
+                                        alt={service.title}
+                                        width={180} // You can specify the width here
+                                        height={120}
+                                        className="w-full h-48 md:56 object-cover rounded-t-2xl mb-4"
+                                    />
+
+                                    <div className="p-4 sm:p-6">
+                                        <h3 className="text-lg sm:text-xl font-semibold text-[#0b58a5] mb-2">
+                                            {service.title}
+                                        </h3>
+                                        <p className="text-sm sm:text-md text-black leading-relaxed">
+                                            {service.description}
+                                        </p>
+                                        <a
+                                            href={service.link}
+                                            className="text-blue-600 font-semibold mt-3 sm:mt-4 inline-block text-sm sm:text-base"
+                                        >
+                                            Learn more →
+                                        </a>
+                                    </div>
+
+                                </motion.div>
+                            ))}
                         </div>
-                      </div>
-            
                     </div>
+
+                </div>
 
             </div>
             <div className="bg-white min-h-auto p-6">
                 <h1 className="text-2xl sm:text-3xl font-bold text-center text-blue-900 mb-6">Annual Reports</h1>
 
                 {/* Tab Design for Year Selection */}
-                <div className="flex flex-wrap justify-center gap-2 mb-6">
-                    {Object.keys(reports).map((year) => (
-                        <button
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6 }}
+                    viewport={{ once: false, amount: 0.2 }}
+                    className="flex flex-wrap justify-center gap-2 mb-6"
+                >
+                    {Object.keys(reports).map((year, index) => (
+                        <motion.button
                             key={year}
                             onClick={() => setSelectedYear(year)}
+                            initial={{ opacity: 0, scale: 0.9 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            transition={{ duration: 0.4, delay: index * 0.05 }}
+                            viewport={{ once: false, amount: 0.2 }}
                             className={`px-4 py-2 rounded-full font-semibold transition-all duration-300 text-sm sm:text-md ${selectedYear === year
-                                ? "bg-[#0b58a5] text-white shadow-md"
-                                : "bg-gray-200 text-gray-700 hover:bg-gray-200 hover:text-blue-600"
+                                    ? "bg-[#0b58a5] text-white shadow-md"
+                                    : "bg-gray-200 text-gray-700 hover:bg-gray-200 hover:text-blue-600"
                                 }`}
                         >
                             {year}
-                        </button>
+                        </motion.button>
                     ))}
-                </div>
+                </motion.div>
 
 
                 {/* Report Display Section */}
 
-                <div className="bg-white w-full sm:max-w-7xl mx-auto ">
+
+
+                <motion.div
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: false, amount: 0.2 }}
+                    transition={{ duration: 0.8 }}
+                    className="bg-white w-full sm:max-w-7xl mx-auto"
+                >
                     {/* Report Details */}
+                    <div className='grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10 lg:gap-16 items-center'>
 
-                    <div className='grid grid-cols-1  md:grid-cols-2 gap-5 md:gap-10 lg:gap-16 items-center '>
-
-                        <div
-                            className="items-center" >
-                            <h2 className="hidden md:block text-xl sm:text:2xl font-bold text-blue-900 mb-4">Annual Report {selectedYear}</h2>
+                        {/* Text Section */}
+                        <motion.div
+                            initial={{ opacity: 0, x: -50 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.7 }}
+                            viewport={{ once: false, amount: 0.2 }}
+                            className="items-center"
+                        >
+                            <h2 className="hidden md:block text-xl sm:text:2xl font-bold text-blue-900 mb-4">
+                                Annual Report {selectedYear}
+                            </h2>
                             <p className="text-md text-black mb-7 sm:my-15 p-1">{reports[selectedYear].text}</p>
 
                             {/* Download Button */}
@@ -298,10 +323,15 @@ const Media = () => {
                                     Download {selectedYear} Report
                                 </a>
                             </div>
-                        </div>
+                        </motion.div>
 
-                        {/* Report Image */}
-                        <div >
+                        {/* Image Section */}
+                        <motion.div
+                            initial={{ opacity: 0, x: 50 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.7 }}
+                            viewport={{ once: false, amount: 0.2 }}
+                        >
                             <Image
                                 src={reports[selectedYear].image}
                                 alt={`Annual Report ${selectedYear}`}
@@ -309,12 +339,10 @@ const Media = () => {
                                 height={500}
                                 className="rounded-4xl shadow-lg hover:scale-105 transition duration-300"
                             />
-                        </div>
-
+                        </motion.div>
                     </div>
+                </motion.div>
 
-
-                </div>
             </div>
 
         </div>
