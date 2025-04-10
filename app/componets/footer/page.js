@@ -86,15 +86,15 @@ const Footer = () => {
           {footerSections.map((section, index) => (
             <div key={index}>
               {/* Section title */}
-              <h3 className="text-xl font-semibold mb-4">{section.title}</h3>
+              <h3 className="text-lg font-semibold mb-4">{section.title}</h3>
 
               {/* List of items in the section */}
               <ul className="text-gray-400 space-y-2">
                 {section.items.map((item, i) => (
-                  <li key={i} className="hover:text-gray-200">
+                  <li key={i} className="hover:text-gray-200 ">
                     {/* Check if the section has links and if the current item has a link */}
                     {section.links && section.links[i] ? (
-                      <a href={section.links[i]} className="hover:text-white">
+                      <a href={section.links[i]} className="hover:text-white text-md">
                         {item}
                       </a>
                     ) : (
@@ -110,7 +110,7 @@ const Footer = () => {
                   {/* Facebook link */}
                   <a
                     href="https://www.facebook.com/sabatiaeyehospital"
-                    className="text-gray-400 hover:text-white flex items-center space-x-2"
+                    className="text-md text-gray-400 hover:text-white flex items-center space-x-2"
                   >
                     <FaFacebookF className="text-2xl" />
                     <span>: Sabatia Eye Hospital</span>
@@ -118,7 +118,7 @@ const Footer = () => {
                   {/* Twitter link */}
                   <a
                     href="https://x.com/SabatiaEye"
-                    className="text-gray-400 hover:text-white flex items-center space-x-2"
+                    className="text-md text-gray-400 hover:text-white flex items-center space-x-2"
                   >
                     <FaXTwitter className="text-2xl" />
                     <span>: Sabatia Eye Hospital</span>
@@ -126,7 +126,7 @@ const Footer = () => {
                   {/* YouTube link */}
                   <a
                     href="https://www.youtube.com/@sabatiaeyehospital8524"
-                    className="text-gray-400 hover:text-white flex items-center space-x-2"
+                    className="text-md text-gray-400 hover:text-white flex items-center space-x-2"
                   >
                     <FaYoutube className="text-2xl" />
                     <span>: Sabatia Eye Hospital</span>
@@ -136,22 +136,22 @@ const Footer = () => {
 
               {/* Conditional rendering for the "Contact Us" section */}
               {section.title === "Contact Us" && (
-                <div className="space-y-4 mt-4 text-gray-400">
+                <div className="space-y-4 mt-4 text-gray-400 text-md">
                   {/* Base Hospital contact information */}
-                  <div className="p-4 rounded-md border border-gray-200">
-                    <h4 className="text-lg">Base Hospital</h4>
+                  <div className="p-4 rounded-md border border-gray-200 ">
+                    <h4 className="text-md">Base Hospital</h4>
                     <p>Phone: +254 723 721 316 / +254 733 731 013</p>
                     <p>Email: sabeyehosp@gmail.com, info@sabatiaeyehospital.org</p>
                   </div>
                   {/* Kisumu Clinic contact information */}
                   <div className="p-4 rounded-md border border-gray-200">
-                    <h4 className="text-lg">Kisumu Clinic</h4>
+                    <h4 className="text-md">Kisumu Clinic</h4>
                     <p>Phone: +254 776 169 926</p>
                     <p>Email: sabatia.kisumu@sabatiaeyehospital.org</p>
                   </div>
                   {/* Eldoret Clinic contact information */}
                   <div className="p-4 rounded-md border border-gray-200">
-                    <h4 className="text-lg">Eldoret Clinic</h4>
+                    <h4 className="text-md">Eldoret Clinic</h4>
                     <p>Phone: +254 707 650 804</p>
                     <p>Email: eldoret@sabatiaeyehospital.org</p>
                   </div>
