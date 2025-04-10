@@ -225,7 +225,7 @@ const Involved = () => {
                 <div className='grid md:grid-cols-2 gap-5 md:gap-10 lg:gap-16 items-center'>
                     <div >
                         <h2 className="text-xl sm:text-2xl sm:text-3xl font-bold text-blue-900  text-center mb-4">Prospectus </h2>
-                        <p className="text-md text-gray-700  sm:p-4   text-justify leading-relaxed">
+                        <p className="text-md text-black sm:p-4   text-justify leading-relaxed">
                             Join us in our mission to combat avoidable blindness and transform lives. Your support can make a profound difference in providing accessible eye care to those in need. Whether through a donation, spreading awareness, or participating in fundraising activities, your involvement empowers us to reach more individuals and families. Together, let’s create a future where everyone has the gift of sight. Take action today and be a beacon of hope for countless individuals affected by vision loss. Together, we can make a lasting impact and bring light into the lives of those in need.
 
                             <br /><br />

@@ -165,7 +165,7 @@ const Services = () => {
 
                     className="w-full sm:max-w-[85%] m-auto  bg-white rounded-lg sm:p-8">
                     <h2 className=" text-2xl sm:text-3xl font-bold text-blue-900 mb-6">Outreach Program</h2>
-                    <div className="grid md:grid-cols-2 gap-5 items-center text-lg">
+                    <div className="grid md:grid-cols-2 gap-5 items-center ">
 
                         <motion.div
 

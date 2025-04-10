@@ -58,8 +58,8 @@ const Manage = () => {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {people.map((person, index) => (
                         <motion.div
-                        initial={{ opacity: 0, x: 100 }}
-                        whileInView={{ opacity: 1, x: 0 }}
+                        initial={{ opacity: 0, scale: 0.1 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: false, amount: 0.2 }}
                         transition={{ duration: 0.7, delay: index * 0.1 }}
                             key={index}

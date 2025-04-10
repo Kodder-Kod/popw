@@ -286,7 +286,7 @@ const Media = () => {
                         <div
                             className="items-center" >
                             <h2 className="hidden md:block text-xl sm:text:2xl font-bold text-blue-900 mb-4">Annual Report {selectedYear}</h2>
-                            <p className="text-md text-gray-700 mb-7 sm:my-15 p-1">{reports[selectedYear].text}</p>
+                            <p className="text-md text-black mb-7 sm:my-15 p-1">{reports[selectedYear].text}</p>
 
                             {/* Download Button */}
                             <div className="flex justify-center md:justify-start">
